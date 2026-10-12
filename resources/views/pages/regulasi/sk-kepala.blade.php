@@ -38,7 +38,7 @@
                 <h1
                     class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white leading-tight drop-shadow-2xl">
                     SK<span class="text-sky-200">-</span>Kepala</h1>
-                <!-- <p class="mx-auto max-w-2xl text-base sm:text-lg font-medium leading-relaxed text-white/85">Kumpulan Undang-Undang yang menjadi dasar hukum pelaksanaan tugas dan fungsi PROKOPIM Kabupaten Mahakam Ulu.</p> -->
+                <!-- <p class="mx-auto max-w-2xl text-base sm:text-lg font-medium leading-relaxed text-white/85">Kumpulan Undang-Undang yang menjadi dasar hukum pelaksanaan tugas dan fungsi Kecamatan Long Bagun Kabupaten Mahakam Ulu.</p> -->
                 <div class="mt-5 flex items-center justify-center gap-2 text-sm text-white/70">
                     <a href="{{ route('beranda') }}"
                         class="hover:text-sky-200 transition-colors">Beranda</a><span>/</span><span>Regulasi</span><span>/</span><span
@@ -63,7 +63,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                                 </svg></span>Daftar SK Kepala</h2>
-                        <p class="text-slate-500 text-sm mt-1 ml-[52px]">Surat Keputusan Kepala PROKOPIM</p>
+                        <p class="text-slate-500 text-sm mt-1 ml-[52px]">Surat Keputusan Camat Long Bagun</p>
                     </div>
                     <div class="mt-4 sm:mt-0">
                         <div
@@ -80,7 +80,7 @@
                 @php
                     $regulasiCategory = 'sk-kepala';
                     $regulations = [
-                        ['key' => 'reg_skk_10_2023', 'no' => 'SK Kepala No. 10 Tahun 2023', 'title' => 'Penetapan Tim Penyusun Rencana Kerja PROKOPIM Tahun 2024', 'year' => '2023', 'status' => 'Berlaku'],
+                        ['key' => 'reg_skk_10_2023', 'no' => 'SK Kepala No. 10 Tahun 2023', 'title' => 'Penetapan Tim Penyusun Rencana Kerja Kecamatan Long Bagun Tahun 2024', 'year' => '2023', 'status' => 'Berlaku'],
                         ['key' => 'reg_skk_5_2022', 'no' => 'SK Kepala No. 5 Tahun 2022', 'title' => 'Pembentukan Tim Evaluasi RPJMD Kabupaten Mahakam Ulu', 'year' => '2022', 'status' => 'Berlaku'],
                         ['key' => 'reg_skk_15_2021', 'no' => 'SK Kepala No. 15 Tahun 2021', 'title' => 'Pedoman Pelaksanaan Musrenbang Tingkat Kecamatan', 'year' => '2021', 'status' => 'Berlaku'],
                 ]; @endphp

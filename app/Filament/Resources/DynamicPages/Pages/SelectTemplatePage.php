@@ -117,7 +117,18 @@ class SelectTemplatePage extends Page
                 'category' => 'Bebas',
                 'cat_color' => '#9ca3af',
             ],
-        ];
+            'berita' => [
+                'label' => 'Daftar Berita',
+                'description' => 'Berita terbaru berhalaman',
+                'category' => 'Modul',
+                'cat_color' => '#059669',
+            ],
+        ] + collect(DynamicPage::modul())->map(fn ($m) => [
+            'label' => $m[0],
+            'description' => $m[1],
+            'category' => 'Modul',
+            'cat_color' => '#059669',
+        ])->all();
     }
 
     public function getCreateUrl(string $template, string $title, string $slug): string

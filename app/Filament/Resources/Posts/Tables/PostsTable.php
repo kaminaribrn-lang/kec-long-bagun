@@ -18,22 +18,23 @@ class PostsTable
             ->columns([
                 TextColumn::make('index')
                     ->label(__('NO'))
-                    ->rowIndex(),
+                    ->rowIndex()
+                    ->width('60px')
+                    ->alignCenter(),
                 TextColumn::make('title')
                     ->label(__('JUDUL'))
                     ->searchable()
                     ->html()
                     ->formatStateUsing(function ($state, \App\Models\Post $record) {
-                        // Palet warna hardcoded hex agar pasti muncul (mirip referensi)
                         $colors = [
-                            ['#fee2e2', '#b91c1c'], // Red
-                            ['#dbeafe', '#1d4ed8'], // Blue
-                            ['#dcfce7', '#3255AA'], // Green
-                            ['#fef9c3', '#a16207'], // Yellow
-                            ['#f3e8ff', '#7e22ce'], // Purple
-                            ['#ffedd5', '#c2410c'], // Orange
-                            ['#ecfeff', '#0e7490'], // Cyan
-                            ['#fce7f3', '#be185d'], // Pink
+                            ['#fee2e2', '#b91c1c'],
+                            ['#dbeafe', '#1d4ed8'],
+                            ['#dcfce7', '#3255AA'],
+                            ['#fef9c3', '#a16207'],
+                            ['#f3e8ff', '#7e22ce'],
+                            ['#ffedd5', '#c2410c'],
+                            ['#ecfeff', '#0e7490'],
+                            ['#fce7f3', '#be185d'],
                         ];
                         
                         $categoryName = $record->category?->name ?? '-';
@@ -43,38 +44,44 @@ class PostsTable
 
                         $hiddenBadge = '';
                         if ($record->category?->slug === 'uncategorized') {
-                            $hiddenBadge = "<span class='inline-flex items-start px-2 py-0.5 rounded text-xs font-bold mr-2 mb-1 bg-gray-200 text-gray-600 border border-gray-300' title='" . __('Tidak tampil di daftar & pencarian Berita publik, hanya bisa diakses lewat tautan langsung') . "'>"
+                            $hiddenBadge = "<span class='inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-gray-200 text-gray-600 border border-gray-300' title='" . e(__('Tidak tampil di daftar & pencarian Berita publik, hanya bisa diakses lewat tautan langsung')) . "'>"
                                 . '🔒 ' . __('TERSEMBUNYI')
                                 . '</span>';
                         }
 
                         return new \Illuminate\Support\HtmlString("
-                            <div class='flex flex-wrap items-start gap-y-1'>
-                                <span class='inline-flex items-start px-2 py-0.5 rounded text-xs font-bold mr-2 mb-1' style='background-color: {$bg}; color: {$text}; border: 1px solid {$bg};'>
-                                    " . strtoupper(__(strtolower($categoryName))) . "
-                                </span>
-                                {$hiddenBadge}
-                                <span class='font-medium text-gray-900 dark:text-white'>" . \Illuminate\Support\Str::limit($state, 100) . "</span>
+                            <div class='flex w-full min-w-0 flex-col items-start gap-1.5 text-left'>
+                                <div class='flex flex-wrap items-center gap-1.5'>
+                                    <span class='inline-flex items-center rounded px-2 py-0.5 text-xs font-bold' style='background-color: {$bg}; color: {$text}; border: 1px solid {$bg};'>
+                                        " . e(strtoupper(__(strtolower($categoryName)))) . "
+                                    </span>
+                                    {$hiddenBadge}
+                                </div>
+                                <span class='w-full font-medium text-gray-900 dark:text-white'>" . e(\Illuminate\Support\Str::limit($state ?? '', 100)) . "</span>
                             </div>
                         ");
                     })
-                    ->extraCellAttributes(['class' => 'long-text-column'])
-                    ->extraHeaderAttributes([])
+                    ->extraCellAttributes(['class' => 'long-text-column text-left'])
+                    ->extraHeaderAttributes(['class' => 'text-left'])
                     ->alignLeft()
                     ->wrap(),
                 TextColumn::make('penulis')
                     ->label(__('PENULIS'))
                     ->searchable()
                     ->placeholder('-')
+                    ->width('160px')
                     ->alignCenter(),
                 TextColumn::make('read')
                     ->label(__('DIBACA'))
                     ->numeric()
                     ->sortable()
+                    ->width('90px')
                     ->alignCenter(),
                 TextColumn::make('created_at')
                     ->label(__('DIBUAT'))
-                    ->dateTime('Y-m-d H:i:s'),
+                    ->dateTime('Y-m-d H:i:s')
+                    ->width('160px')
+                    ->alignCenter(),
                 TextColumn::make('status')
                     ->label(__('STATUS'))
                     ->badge()
@@ -83,6 +90,7 @@ class PostsTable
                         'success' => 1,
                         'warning' => 0,
                     ])
+                    ->width('100px')
                     ->alignCenter(),
  
             ])

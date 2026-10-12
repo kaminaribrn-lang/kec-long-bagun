@@ -46,6 +46,7 @@ class DynamicPageForm
                             Group::make(Templates\Dokumen::schema())->visible(fn(Get $get) => in_array($get('template'), ['dokumen_grid', 'dokumen_list'])),
                             Group::make(Templates\Tabel::schema())->visible(fn(Get $get) => $get('template') === 'tabel'),
                             Group::make(Templates\BlankEditor::schema())->visible(fn(Get $get) => $get('template') === 'blank_editor'),
+                            Group::make(Templates\Modul::schema())->visible(fn(Get $get) => $get('template') === 'berita' || isset(DynamicPage::modul()[$get('template')])),
                         ]),
                 ]),
 

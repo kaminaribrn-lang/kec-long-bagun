@@ -14,5 +14,16 @@ class Aparatur extends Model
         'photo',
         'order',
         'status',
+        'parent_id',
     ];
+
+    public function atasan(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(self::class, 'parent_id');
+    }
+
+    public function bawahan(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(self::class, 'parent_id')->orderBy('order');
+    }
 }

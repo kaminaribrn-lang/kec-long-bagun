@@ -98,7 +98,7 @@
             // Dummy Data
             dummyData: [
                 { id: 1, title: 'Rapat Paripurna DPRD Mengenai APBD 2026', description: 'Pembahasan rancangan awal Anggaran Pendapatan dan Belanja Daerah Kabupaten Mahakam Ulu tahun anggaran 2026.', date: { day: '14', month: 'Aug' }, time: '09:00 WITA', location: 'Gedung DPRD Mahulu', image: 'https://images.unsplash.com/photo-1577962917302-cd874462e648?q=80&w=600&auto=format&fit=crop' },
-                { id: 2, title: 'Sosialisasi E-Planning untuk OPD', description: 'Pelatihan dan sosialisasi penggunaan sistem E-Planning terbaru untuk seluruh perwakilan Organisasi Perangkat Daerah.', date: { day: '22', month: 'Aug' }, time: '13:00 WITA', location: 'Ruang Rapat PROKOPIM', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop' },
+                { id: 2, title: 'Sosialisasi E-Planning untuk OPD', description: 'Pelatihan dan sosialisasi penggunaan sistem E-Planning terbaru untuk seluruh perwakilan Organisasi Perangkat Daerah.', date: { day: '22', month: 'Aug' }, time: '13:00 WITA', location: 'Ruang Rapat Kecamatan Long Bagun', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop' },
                 { id: 3, title: 'Kunjungan Kerja Kementerian Perencanaan', description: 'Monitoring evaluasi proyek strategis nasional di wilayah perbatasan Mahakam Ulu oleh tim kementerian.', date: { day: '05', month: 'Sep' }, time: '10:00 WITA', location: 'Kantor Bupati', image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop' }
             ],
 

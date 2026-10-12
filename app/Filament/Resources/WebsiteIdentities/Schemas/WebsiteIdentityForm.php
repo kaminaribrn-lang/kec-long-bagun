@@ -171,13 +171,11 @@ class WebsiteIdentityForm
                                         '1:1',
                                         '4:5',
                                     ])
-                                    ->maxSize(2048)
-                                    ->required(),
+                                    ->maxSize(2048),
 
                                 TextInput::make('name')
                                     ->label(__('Nama Pimpinan'))
                                     ->placeholder('Contoh: Margono, S.T., M.Si')
-                                    ->required()
                                     ->columnSpanFull(),
 
                                 TextInput::make('position')
@@ -186,15 +184,15 @@ class WebsiteIdentityForm
                                     ->columnSpanFull(),
                             ])
                             ->columns(1)
-                            ->defaultItems(1)
-                            ->minItems(1)
+                            ->defaultItems(0)
                             ->maxItems(10)
                             ->reorderable()
                             ->collapsible()
                             ->itemLabel(fn (array $state): ?string => $state['name'] ?? null)
-                            ->addActionLabel(false)
+                            ->addActionLabel(__('Tambah pimpinan'))
                             ->columnSpanFull(),
                     ])
+                    ->description(__('Opsional. Boleh dikosongkan.'))
                     ->columnSpanFull(),
 
                 // ── Link-Link Footer ──────────────────────────────────────────
@@ -266,6 +264,61 @@ class WebsiteIdentityForm
                     ])
                     ->columnSpanFull(),
 
+                            ]),
+                        \Filament\Schemas\Components\Tabs\Tab::make('Kecamatan')
+                            ->icon('heroicon-m-map')
+                            ->schema([
+                                Section::make(__('Peringatan darurat'))
+                                    ->description(__('Pita di paling atas semua halaman. Tampil hanya saat dinyalakan.'))
+                                    ->schema([
+                                        Toggle::make('alert_active')->label(__('Nyalakan pita peringatan')),
+                                        \Filament\Forms\Components\Select::make('alert_level')->label(__('Tingkat'))
+                                            ->options(['info' => 'Info', 'waspada' => 'Waspada', 'bahaya' => 'Bahaya'])->default('info'),
+                                        TextInput::make('alert_text')->label(__('Teks peringatan'))->maxLength(500)->columnSpanFull(),
+                                    ])->columns(2),
+
+                                Section::make(__('Pelayanan dan lokasi'))
+                                    ->schema([
+                                        TextInput::make('jam_pelayanan')->label(__('Jam pelayanan'))->placeholder('Senin–Jumat, 08.00–16.00 WITA')
+                                            ->helperText(__('Bila kosong, halaman depan menampilkan [JAM PELAYANAN].'))->columnSpanFull(),
+                                        TextInput::make('latitude')->label(__('Lintang kantor (desimal)'))->numeric()->step(0.000001),
+                                        TextInput::make('longitude')->label(__('Bujur kantor (desimal)'))->numeric()->step(0.000001),
+                                    ])->columns(2),
+
+                                Section::make(__('Gambar utama beranda'))
+                                    ->schema([
+                                        FileUpload::make('hero_image')->label(__('Foto latar beranda'))
+                                            ->image()->disk('public')->visibility('public')->directory('beranda')
+                                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                                            ->imageResizeMode('contain')->imageResizeTargetWidth('1600')->imageResizeTargetHeight('1100')->imageResizeUpscale(false)
+                                            ->maxSize(4096)
+                                            ->helperText(__('Foto lebar Sungai Mahakam atau Batu Dinding. Bila kosong, dipakai foto bawaan.')),
+                                        TextInput::make('hero_image_kredit')->label(__('Kredit foto latar'))
+                                            ->helperText(__('Nama pemotret atau pemilik foto. Bila kosong, tampil [KREDIT FOTO].')),
+                                    ]),
+
+                                Section::make(__('Geografi dan batas wilayah'))
+                                    ->description(__('Tampil di halaman modul "Geografi & Peta". Sejarah serta visi dan misi diatur lewat menu Halaman Dinamis.'))
+                                    ->schema([
+                                        \Filament\Forms\Components\RichEditor::make('geografi')->label(__('Uraian geografi'))->columnSpanFull(),
+                                        TextInput::make('batas_utara')->label(__('Batas utara')),
+                                        TextInput::make('batas_timur')->label(__('Batas timur')),
+                                        TextInput::make('batas_selatan')->label(__('Batas selatan')),
+                                        TextInput::make('batas_barat')->label(__('Batas barat')),
+                                    ])->columns(2)->collapsible(),
+
+                                Section::make(__('Cara menuju Long Bagun'))
+                                    ->schema([
+                                        Repeater::make('akses')->label(__('Jalur'))
+                                            ->schema([
+                                                TextInput::make('jalur')->label(__('Nama jalur'))->required()->placeholder('Sungai'),
+                                                Textarea::make('isi')->label(__('Penjelasan'))->rows(3)->required(),
+                                            ])
+                                            ->itemLabel(fn (array $state): ?string => $state['jalur'] ?? null)
+                                            ->defaultItems(0)->collapsible()->addActionLabel(__('Tambah jalur')),
+                                        Textarea::make('akses_catatan')->label(__('Catatan (misalnya rawan banjir)'))->rows(2),
+                                        \Filament\Forms\Components\DatePicker::make('akses_diperbarui')->label(__('Tanggal pembaruan terakhir'))->native(false)->displayFormat('d/m/Y'),
+                                    ])->collapsible(),
                             ]),
                         \Filament\Schemas\Components\Tabs\Tab::make('Integrasi & SEO')
                             ->icon('heroicon-m-globe-alt')

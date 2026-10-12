@@ -38,7 +38,7 @@
                 <h1
                     class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white leading-tight drop-shadow-2xl">
                     Peraturan<span class="text-sky-200">-</span>Bupati</h1>
-                <!-- <p class="mx-auto max-w-2xl text-base sm:text-lg font-medium leading-relaxed text-white/85">Kumpulan Undang-Undang yang menjadi dasar hukum pelaksanaan tugas dan fungsi PROKOPIM Kabupaten Mahakam Ulu.</p> -->
+                <!-- <p class="mx-auto max-w-2xl text-base sm:text-lg font-medium leading-relaxed text-white/85">Kumpulan Undang-Undang yang menjadi dasar hukum pelaksanaan tugas dan fungsi Kecamatan Long Bagun Kabupaten Mahakam Ulu.</p> -->
                 <div class="mt-5 flex items-center justify-center gap-2 text-sm text-white/70">
                     <a href="{{ route('beranda') }}"
                         class="hover:text-sky-200 transition-colors">Beranda</a><span>/</span><span>Regulasi</span><span>/</span><span
@@ -65,7 +65,7 @@
                 @php
                 $regulasiCategory = 'peraturan-bupati';
                 $regulations = [
-                    ['key' => 'reg_pb_12_2021', 'no' => 'Perbup No. 12 Tahun 2021', 'title' => 'Kedudukan, Susunan Organisasi, Tugas dan Fungsi serta Tata Kerja PROKOPIM', 'year' => '2021', 'status' => 'Berlaku'],
+                    ['key' => 'reg_pb_12_2021', 'no' => 'Perbup No. 12 Tahun 2021', 'title' => 'Kedudukan, Susunan Organisasi, Tugas dan Fungsi serta Tata Kerja Kecamatan Long Bagun', 'year' => '2021', 'status' => 'Berlaku'],
                     ['key' => 'reg_pb_8_2022', 'no' => 'Perbup No. 8 Tahun 2022', 'title' => 'Rencana Kerja Pemerintah Daerah (RKPD) Tahun 2023', 'year' => '2022', 'status' => 'Berlaku'],
                     ['key' => 'reg_pb_15_2020', 'no' => 'Perbup No. 15 Tahun 2020', 'title' => 'Pedoman Penyusunan Perencanaan Pembangunan Desa', 'year' => '2020', 'status' => 'Berlaku'],
                     ['key' => 'reg_pb_3_2023', 'no' => 'Perbup No. 3 Tahun 2023', 'title' => 'Standar Biaya Umum Pemerintah Kabupaten Mahakam Ulu', 'year' => '2023', 'status' => 'Berlaku'],

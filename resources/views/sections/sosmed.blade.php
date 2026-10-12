@@ -91,7 +91,7 @@
                                     Facebook</p>
                                 <h4
                                     class="font-heading font-black text-slate-800 text-base group-hover:text-blue-600 transition-colors truncate">
-                                    Prokopim Mahulu</h4>
+                                    Kecamatan Long Bagun</h4>
                                 <p class="text-xs text-slate-500 font-body mt-0.5">Berita & Pengumuman</p>
                             </div>
                             <svg class="w-5 h-5 text-slate-300 group-hover:text-blue-500 group-hover:translate-x-1 transition-all shrink-0"

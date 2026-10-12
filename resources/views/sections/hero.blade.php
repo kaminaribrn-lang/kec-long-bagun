@@ -34,7 +34,7 @@
 				</p>
 
 				<h1 class="max-w-4xl text-3xl font-black leading-tight sm:text-4xl lg:text-5xl xl:text-6xl">
-					<span class="block uppercase tracking-tight text-white">Bagian PROKOPIM</span>
+					<span class="block uppercase tracking-tight text-white">Kecamatan Long Bagun</span>
 					<span class="mt-1 block uppercase tracking-tight text-white">MAHAKAM ULU</span>
 				</h1>
 

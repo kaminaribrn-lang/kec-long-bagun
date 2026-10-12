@@ -14,7 +14,7 @@
                     <div class="relative flex h-2 w-2 mx-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#274CA5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#9ae600]"></span></div>Dokumen
                 </div>
                 <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-[#10192D] leading-tight drop-shadow-2xl">Laporan <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">LKjIP</span></h1>
-                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Laporan Kinerja Instansi Pemerintah (LKjIP/SAKIP) PROKOPIM Kabupaten Mahakam Ulu â€” pertanggungjawaban kinerja organisasi.</p>
+                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Laporan Kinerja Instansi Pemerintah (LKjIP/SAKIP) Kecamatan Long Bagun Kabupaten Mahakam Ulu â€” pertanggungjawaban kinerja organisasi.</p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-[#274CA5] transition-colors">Beranda</a><span>/</span><span>Dokumen</span><span>/</span><span class="text-[#274CA5]">Laporan LKjIP</span>
                 </div>
@@ -45,12 +45,12 @@
                 @php
                 $dokumenCategory = 'sakip';
                 $documents = [
-                    ['key' => 'dok_lkjip_2025', 'no' => 'LKjIP 2025', 'title' => 'Laporan Kinerja Instansi Pemerintah PROKOPIM Tahun 2025', 'year' => '2025', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_lkjip_2024', 'no' => 'LKjIP 2024', 'title' => 'Laporan Kinerja Instansi Pemerintah PROKOPIM Tahun 2024', 'year' => '2024', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_lkjip_2023', 'no' => 'LKjIP 2023', 'title' => 'Laporan Kinerja Instansi Pemerintah PROKOPIM Tahun 2023', 'year' => '2023', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_lkjip_2022', 'no' => 'LKjIP 2022', 'title' => 'Laporan Kinerja Instansi Pemerintah PROKOPIM Tahun 2022', 'year' => '2022', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_lkjip_2021', 'no' => 'LKjIP 2021', 'title' => 'Laporan Kinerja Instansi Pemerintah PROKOPIM Tahun 2021', 'year' => '2021', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_pk_2025', 'no' => 'Perjanjian Kinerja 2025', 'title' => 'Perjanjian Kinerja PROKOPIM Kabupaten Mahakam Ulu Tahun 2025', 'year' => '2025', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_lkjip_2025', 'no' => 'LKjIP 2025', 'title' => 'Laporan Kinerja Instansi Pemerintah Kecamatan Long Bagun Tahun 2025', 'year' => '2025', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_lkjip_2024', 'no' => 'LKjIP 2024', 'title' => 'Laporan Kinerja Instansi Pemerintah Kecamatan Long Bagun Tahun 2024', 'year' => '2024', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_lkjip_2023', 'no' => 'LKjIP 2023', 'title' => 'Laporan Kinerja Instansi Pemerintah Kecamatan Long Bagun Tahun 2023', 'year' => '2023', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_lkjip_2022', 'no' => 'LKjIP 2022', 'title' => 'Laporan Kinerja Instansi Pemerintah Kecamatan Long Bagun Tahun 2022', 'year' => '2022', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_lkjip_2021', 'no' => 'LKjIP 2021', 'title' => 'Laporan Kinerja Instansi Pemerintah Kecamatan Long Bagun Tahun 2021', 'year' => '2021', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_pk_2025', 'no' => 'Perjanjian Kinerja 2025', 'title' => 'Perjanjian Kinerja Kecamatan Long Bagun Kabupaten Mahakam Ulu Tahun 2025', 'year' => '2025', 'type' => 'PDF', 'status' => 'Berlaku'],
                 ]; @endphp
                 @include('pages.dokumen._document-list')
             </main>

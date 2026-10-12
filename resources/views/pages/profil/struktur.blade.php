@@ -34,7 +34,7 @@
                     Struktur <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">Organisasi</span>
                 </h1>
                 <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">
-                    Susunan organisasi dan tata kerja PROKOPIM Kabupaten Mahakam Ulu berdasarkan regulasi yang berlaku.
+                    Susunan organisasi dan tata kerja Kecamatan Long Bagun Kabupaten Mahakam Ulu berdasarkan regulasi yang berlaku.
                 </p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-[#274CA5] transition-colors">Beranda</a>
@@ -61,7 +61,7 @@
                 <h2 class="text-xl font-bold text-slate-800">Dasar Hukum</h2>
             </div>
             <p class="text-slate-600 leading-relaxed">
-                PROKOPIM Kabupaten Mahakam Ulu dibentuk berdasarkan <span class="font-semibold text-sky-700">Peraturan Daerah Kabupaten Mahakam Ulu</span> tentang Pembentukan dan Susunan Perangkat Daerah Kabupaten Mahakam Ulu.
+                Kecamatan Long Bagun Kabupaten Mahakam Ulu dibentuk berdasarkan <span class="font-semibold text-sky-700">Peraturan Daerah Kabupaten Mahakam Ulu</span> tentang Pembentukan dan Susunan Perangkat Daerah Kabupaten Mahakam Ulu.
             </p>
         </div>
 
@@ -83,7 +83,7 @@
             {{-- Image Container --}}
             <div class="relative w-full overflow-x-auto bg-slate-50 border-2 border-dashed border-slate-200 rounded-xl p-4 md:p-8 flex items-center justify-center min-h-[400px]">
                 <img src="{{ asset('images/struktur_organisasi2.webp') }}"
-                     alt="Bagan Struktur Organisasi PROKOPIM Mahakam Ulu"
+                     alt="Bagan Struktur Organisasi Kecamatan Long Bagun"
                      class="max-w-full h-auto object-contain rounded-lg shadow-sm"
                      loading="lazy">
                      

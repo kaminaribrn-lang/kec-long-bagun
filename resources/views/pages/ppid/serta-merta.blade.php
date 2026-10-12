@@ -83,7 +83,7 @@
                         'rows'  => [
                             ['key' => 'ppid_sm_kerusakan_infra', 'no' => 1, 'judul' => 'Pemberitahuan Kerusakan Infrastruktur Vital di Kabupaten Mahakam Ulu', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/sm-kerusakan-infra.pdf'],
                             ['key' => 'ppid_sm_gangguan_listrik', 'no' => 2, 'judul' => 'Informasi Gangguan Listrik dan Layanan dasar Masyarakat', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/sm-gangguan-listrik.pdf'],
-                            ['key' => 'ppid_sm_standar_pengumuman', 'no' => 3, 'judul' => 'Standar Pengumuman Informasi Serta Merta PROKOPIM Kab. Mahakam Ulu', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/sm-standar-pengumuman.pdf'],
+                            ['key' => 'ppid_sm_standar_pengumuman', 'no' => 3, 'judul' => 'Standar Pengumuman Informasi Serta Merta Kecamatan Long Bagun Kab. Mahakam Ulu', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/sm-standar-pengumuman.pdf'],
                         ],
                     ],
                 ];

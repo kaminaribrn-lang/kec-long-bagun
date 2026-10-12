@@ -8,7 +8,7 @@ use Filament\Widgets\Widget;
 class SystemLogsWidget extends Widget
 {
     protected string $view = 'filament.widgets.system-logs-widget';
-    protected static ?string $pollingInterval = '10s';
+    protected static ?string $pollingInterval = '60s';
 
     public $filter = 'terbaru';
 

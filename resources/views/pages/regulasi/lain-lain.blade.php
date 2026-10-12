@@ -10,7 +10,7 @@
             <div class="max-w-4xl text-center" data-aos="fade-up">
                 <div class="inline-flex items-center pr-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-bold tracking-[0.2em] uppercase backdrop-blur-sm shadow-xl mb-3"><div class="relative flex h-2 w-2 px-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#274CA5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#9ae600]"></span></div>Regulasi</div>
                 <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-[#10192D] leading-tight drop-shadow-2xl">Lain<span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">-</span>lain</h1>
-                <p class="text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Regulasi dan dokumen hukum lainnya yang mendukung pelaksanaan tugas PROKOPIM.</p>
+                <p class="text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Regulasi dan dokumen hukum lainnya yang mendukung pelaksanaan tugas Kecamatan Long Bagun.</p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50"><a href="{{ route('beranda') }}" class="hover:text-[#274CA5] transition-colors">Beranda</a><span>/</span><span>Regulasi</span><span>/</span><span class="text-[#274CA5]">Lain-lain</span></div>
             </div>
         </div>

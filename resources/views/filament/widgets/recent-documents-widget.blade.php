@@ -1,4 +1,4 @@
-<div class="widget-card h-full" style="padding: 1.5rem;" wire:poll.10s>
+<div class="widget-card h-full" style="padding: 1.5rem;" wire:poll.60s>
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
         <h3 class="text-main" style="font-size: 1.125rem; font-weight: 850;">{{ __('Dokumen Terbaru') }}</h3>
         <a href="{{ url('/site-admin/file-sharings') }}" class="text-dim" style="text-decoration: none; font-size: 0.75rem; font-weight: 600;">{{ __('Lihat Semua') }}</a>

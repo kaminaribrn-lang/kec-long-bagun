@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div style="display: flex; flex-direction: column; gap: 1rem;" wire:poll.10s>
+    <div style="display: flex; flex-direction: column; gap: 1rem;" wire:poll.60s>
         @foreach($this->getData() as $log)
             <a href="{{ $log['url'] }}" class="log-item inner-card" style="text-decoration: none; display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; transition: all 0.2s;">
                 <div style="margin-top: 0.25rem;">

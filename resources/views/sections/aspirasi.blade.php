@@ -17,7 +17,7 @@
                     <h2 class="font-montserrat font-black text-3xl md:text-4xl lg:text-5xl text-white tracking-tight mb-6">
                         Layanan <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#274CA5] to-yellow-200">Aspirasi & Pengaduan</span>
                     </h2>
-                    <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-medium">Sampaikan masukan konstruktif, pengaduan, dan saran untuk pembangunan, atau terhubung langsung melalui kanal media sosial resmi <label class="whitespace-nowrap">PROKOPIM Mahakam Ulu.</label></p>
+                    <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-medium">Sampaikan masukan konstruktif, pengaduan, dan saran untuk pembangunan, atau terhubung langsung melalui kanal media sosial resmi <label class="whitespace-nowrap">Kecamatan Long Bagun.</label></p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -124,7 +124,7 @@
                                 </div>
                                 <div class="flex-1 min-w-0">
                                     <h4 class="font-montserrat font-bold text-white text-[15px] tracking-widest mb-0.5 group-hover:text-red-500 transition-colors uppercase">YouTube</h4>
-                                    <p class="text-slate-400 text-xs font-medium tracking-wide">PROKOPIM TV</p>
+                                    <p class="text-slate-400 text-xs font-medium tracking-wide">Kecamatan Long Bagun TV</p>
                                 </div>
                                 <!-- Arrow indicator -->
                                 <div class="hidden md:flex w-8 h-8 shrink-0 items-center justify-center text-slate-600 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-red-500 transition-all duration-300">

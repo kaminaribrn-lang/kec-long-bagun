@@ -38,7 +38,7 @@
                 <h1
                     class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white leading-tight drop-shadow-2xl">
                     Peraturan<span class="text-sky-200">-</span>Daerah</h1>
-                <!-- <p class="mx-auto max-w-2xl text-base sm:text-lg font-medium leading-relaxed text-white/85">Kumpulan Undang-Undang yang menjadi dasar hukum pelaksanaan tugas dan fungsi PROKOPIM Kabupaten Mahakam Ulu.</p> -->
+                <!-- <p class="mx-auto max-w-2xl text-base sm:text-lg font-medium leading-relaxed text-white/85">Kumpulan Undang-Undang yang menjadi dasar hukum pelaksanaan tugas dan fungsi Kecamatan Long Bagun Kabupaten Mahakam Ulu.</p> -->
                 <div class="mt-5 flex items-center justify-center gap-2 text-sm text-white/70">
                     <a href="{{ route('beranda') }}"
                         class="hover:text-sky-200 transition-colors">Beranda</a><span>/</span><span>Regulasi</span><span>/</span><span

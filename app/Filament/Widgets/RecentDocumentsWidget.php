@@ -8,7 +8,7 @@ use Filament\Widgets\Widget;
 class RecentDocumentsWidget extends Widget
 {
     protected string $view = 'filament.widgets.recent-documents-widget';
-    protected static ?string $pollingInterval = '10s';
+    protected static ?string $pollingInterval = '60s';
 
     public function getData(): array
     {

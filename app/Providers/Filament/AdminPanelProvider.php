@@ -67,7 +67,7 @@ class AdminPanelProvider extends PanelProvider
                         line-height: 1;
                         font-family: \'Plus Jakarta Sans\', sans-serif;
                     ">
-                        CMS PROKOPIM Mahulu<br>
+                        CMS Kecamatan Long Bagun<br>
                         <span style="font-size: 0.65rem; color: #2563eb; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">' . __('Admin Panel') . '</span>
                     </span>
                 </div>
@@ -707,7 +707,8 @@ class AdminPanelProvider extends PanelProvider
 
             // === 4. KONFIGURASI UMUM ===
             ->globalSearch(false)
-            ->font('Poppins')
+            ->font('Poppins', url: '/fonts/poppins/poppins.css', provider: \Filament\FontProviders\LocalFontProvider::class)
+            ->defaultAvatarProvider(\App\Filament\AvatarProviders\InisialAvatarProvider::class)
             ->icons([
                 'panels::sidebar.collapse-button' => 'heroicon-o-bars-3',
                 'panels::sidebar.expand-button' => 'heroicon-o-bars-3',
@@ -718,6 +719,8 @@ class AdminPanelProvider extends PanelProvider
                 // Language switcher moved outside to top bar for easier access
             ])
             ->navigationGroups([
+                'Kecamatan' => \Filament\Navigation\NavigationGroup::make('Kecamatan')
+                    ->label(__('Kecamatan')),
                 'Portal' => \Filament\Navigation\NavigationGroup::make('Portal')
                     ->label(__('Portal')),
                 'Website' => \Filament\Navigation\NavigationGroup::make('Website')

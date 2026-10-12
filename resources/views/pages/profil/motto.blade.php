@@ -3,7 +3,7 @@
         'badge' => 'Profil Instansi',
         'title' => 'Motto',
         'titleHighlight' => '& Maklumat',
-        'subtitle' => 'Semangat dan komitmen pelayanan PROKOPIM Kabupaten Mahakam Ulu kepada masyarakat.',
+        'subtitle' => 'Semangat dan komitmen pelayanan Kecamatan Long Bagun Kabupaten Mahakam Ulu kepada masyarakat.',
         'breadcrumbs' => [
             ['label' => 'Beranda', 'route' => 'beranda'],
         ],

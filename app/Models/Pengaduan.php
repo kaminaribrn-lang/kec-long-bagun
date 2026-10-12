@@ -33,6 +33,7 @@ class Pengaduan extends Model
         'handled_by',
         'handled_at',
         'is_anonymous',
+        'kampung',
     ];
 
     protected $casts = [

@@ -11,7 +11,7 @@ class PerformanceTrendChart extends ChartWidget
     {
         return __('Tren Publikasi Bulanan');
     }
-    protected ?string $pollingInterval = '30s';
+    protected ?string $pollingInterval = '60s';
 
     public function getMaxHeight(): ?string
     {

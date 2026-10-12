@@ -41,6 +41,17 @@ class GalleryForm
                     ->helperText(__('Format: JPG, PNG, atau GIF. Maksimal 5MB.'))
                     ->columnSpanFull(),
                 
+                TextInput::make('kegiatan')
+                    ->label(__('Nama kegiatan'))
+                    ->maxLength(255)
+                    ->datalist(fn () => \App\Models\Gallery::query()->whereNotNull('kegiatan')->distinct()->pluck('kegiatan')->all())
+                    ->helperText(__('Foto dengan nama kegiatan yang sama tampil dalam satu kelompok di halaman Galeri.')),
+
+                TextInput::make('kredit')
+                    ->label(__('Kredit foto'))
+                    ->maxLength(255)
+                    ->helperText(__('Nama pemotret atau pemilik foto.')),
+
                 TextInput::make('order')
                     ->label(__('Urutan'))
                     ->numeric()

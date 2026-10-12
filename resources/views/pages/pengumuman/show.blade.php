@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <x-slot name="pageTitle">{{ $item['title'] }} | PROKOPIM Mahakam Ulu</x-slot>
+    <x-slot name="pageTitle">{{ $item['title'] }} | Kecamatan Long Bagun</x-slot>
     <x-slot name="metaDescription">{{ $item['excerpt'] }}</x-slot>
     <x-slot name="metaImage">{{ $item['image'] }}</x-slot>
 

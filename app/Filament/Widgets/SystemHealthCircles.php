@@ -10,7 +10,7 @@ use Filament\Widgets\Widget;
 class SystemHealthCircles extends Widget
 {
     protected string $view = 'filament.widgets.system-health-circles';
-    protected static ?string $pollingInterval = '15s';
+    protected static ?string $pollingInterval = '60s';
 
     public function getData(): array
     {

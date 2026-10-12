@@ -47,12 +47,16 @@ class Post extends Model
         'published_at',
         'sort_order',
         'seo',
+        'ringkasan',
+        'kredit_foto',
+        'berakhir_at',
     ];
 
     protected $casts = [
         'tags' => 'array',
         'published_at' => 'datetime',
         'seo' => 'array',
+        'berakhir_at' => 'date',
     ];
 
     public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo

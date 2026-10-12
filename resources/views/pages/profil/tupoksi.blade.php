@@ -34,7 +34,7 @@
                     Tugas Pokok <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">&amp; Fungsi</span>
                 </h1>
                 <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">
-                    Peran dan kewenangan PROKOPIM dalam mendukung perencanaan dan pembangunan daerah Kabupaten Mahakam Ulu.
+                    Peran dan kewenangan Kecamatan Long Bagun dalam mendukung perencanaan dan pembangunan daerah Kabupaten Mahakam Ulu.
                 </p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-[#274CA5] transition-colors">Beranda</a>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="bg-sky-50 rounded-xl p-6 border border-sky-100">
                     <p class="text-slate-700 leading-relaxed text-lg">
-                        PROKOPIM mempunyai tugas membantu Bupati dalam <span class="font-semibold text-sky-700">melaksanakan fungsi keprotokolan, komunikasi pimpinan, serta hubungan masyarakat dan kehumasan</span> Pemerintah Kabupaten Mahakam Ulu.
+                        Kecamatan Long Bagun mempunyai tugas membantu Bupati dalam <span class="font-semibold text-sky-700">melaksanakan fungsi keprotokolan, komunikasi pimpinan, serta hubungan masyarakat dan kehumasan</span> Pemerintah Kabupaten Mahakam Ulu.
                     </p>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                         ['icon' => 'M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z', 'fungsi' => 'Pelaksanaan koordinasi tata acara, agenda kedinasan, dan kunjungan kerja pimpinan daerah.', 'color' => 'blue'],
                         ['icon' => 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z', 'fungsi' => 'Pemantauan, dokumentasi dan pelaporan atas pemberitaan dan publikasi kegiatan pimpinan daerah.', 'color' => 'violet'],
                         ['icon' => 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', 'fungsi' => 'Pelaksanaan pengelolaan informasi publik dan hubungan media (kehumasan) Pemerintah Daerah.', 'color' => 'emerald'],
-                        ['icon' => 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0', 'fungsi' => 'Pelaksanaan administrasi PROKOPIM sesuai dengan lingkup tugasnya.', 'color' => 'amber'],
+                        ['icon' => 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0', 'fungsi' => 'Pelaksanaan administrasi Kecamatan Long Bagun sesuai dengan lingkup tugasnya.', 'color' => 'amber'],
                         ['icon' => 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z', 'fungsi' => 'Pelaksanaan fungsi lain yang diberikan oleh Bupati sesuai dengan tugas dan fungsinya.', 'color' => 'rose'],
                     ] as $item)
                     <div class="flex gap-4 p-5 rounded-xl border border-slate-100 hover:border-{{ $item['color'] }}-300 hover:bg-{{ $item['color'] }}-50/50 transition-all duration-300 group">

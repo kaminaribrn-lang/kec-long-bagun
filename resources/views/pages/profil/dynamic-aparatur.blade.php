@@ -1,6 +1,6 @@
 <x-layouts.app>
     @php
-        $subtitle = $profilePage?->content['subtitle'] ?? 'Data aparatur PROKOPIM Kabupaten Mahakam Ulu.';
+        $subtitle = $profilePage?->content['subtitle'] ?? 'Data aparatur Kecamatan Long Bagun Kabupaten Mahakam Ulu.';
         $photoFor = fn ($item) => $item->photo ? asset('storage/' . ltrim($item->photo, '/')) : asset('images/desamahakamulu.jpg');
     @endphp
 

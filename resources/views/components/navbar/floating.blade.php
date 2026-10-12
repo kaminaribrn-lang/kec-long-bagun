@@ -34,7 +34,7 @@
                  <!-- <div class="flex items-center justify-center rounded-full "
                      :class="scrolled ? 'w-10 h-10 md:w-12 md:h-12' : 'w-10 h-10 md:w-12 md:h-12'">
                     <img src="{{ asset('images/logo_prokopim.png') }}"
-                        alt="Logo Prokopim"
+                        alt="Logo Kecamatan Long Bagun"
                         class="w-[82%] h-[82%] object-contain group-hover:scale-105 transition-transform duration-500"
                         style="filter: drop-shadow(0 0 1px rgba(15, 23, 42, 1)) drop-shadow(0 0 2px rgba(255, 255, 255, 1));" />
                  </div> -->

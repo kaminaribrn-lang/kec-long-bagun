@@ -15,7 +15,7 @@
                     <div class="relative flex h-2 w-2 mx-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#9ae600]"></span></div>Dokumen
                 </div>
                 <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-[#10192D] leading-tight drop-shadow-2xl"><span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">REN</span>STRA</h1>
-                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Rencana Strategis (RENSTRA) PROKOPIM Kabupaten Mahakam Ulu â€” dokumen perencanaan jangka menengah perangkat daerah.</p>
+                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Rencana Strategis (RENSTRA) Kecamatan Long Bagun Kabupaten Mahakam Ulu â€” dokumen perencanaan jangka menengah perangkat daerah.</p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-yellow-400 transition-colors">Beranda</a><span>/</span><span>Dokumen</span><span>/</span><span class="text-yellow-400">RENSTRA</span>
                 </div>
@@ -46,9 +46,9 @@
                 @php
                 $dokumenCategory = 'renstra';
                 $documents = [
-                    ['key' => 'dok_renstra_2021_2026', 'no' => 'RENSTRA 2021-2026', 'title' => 'Rencana Strategis PROKOPIM Kabupaten Mahakam Ulu Tahun 2021-2026', 'year' => '2021', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_renstra_2016_2021', 'no' => 'RENSTRA 2016-2021', 'title' => 'Rencana Strategis PROKOPIM Kabupaten Mahakam Ulu Tahun 2016-2021', 'year' => '2016', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_renstra_perubahan', 'no' => 'Perubahan RENSTRA', 'title' => 'Perubahan Rencana Strategis PROKOPIM Kabupaten Mahakam Ulu Tahun 2021-2026', 'year' => '2023', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_renstra_2021_2026', 'no' => 'RENSTRA 2021-2026', 'title' => 'Rencana Strategis Kecamatan Long Bagun Kabupaten Mahakam Ulu Tahun 2021-2026', 'year' => '2021', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_renstra_2016_2021', 'no' => 'RENSTRA 2016-2021', 'title' => 'Rencana Strategis Kecamatan Long Bagun Kabupaten Mahakam Ulu Tahun 2016-2021', 'year' => '2016', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_renstra_perubahan', 'no' => 'Perubahan RENSTRA', 'title' => 'Perubahan Rencana Strategis Kecamatan Long Bagun Kabupaten Mahakam Ulu Tahun 2021-2026', 'year' => '2023', 'type' => 'PDF', 'status' => 'Berlaku'],
                 ]; @endphp
                 @include('pages.dokumen._document-list')
             </main>

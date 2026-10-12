@@ -16,9 +16,11 @@ class Agenda extends Model
         'caption',
         'description',
         'location',
+        'end_at',
     ];
 
     protected $casts = [
         'schedule' => 'datetime',
+        'end_at' => 'datetime',
     ];
 }

@@ -1,6 +1,6 @@
 <x-layouts.app>
     @php
-        $subtitle = $profilePage?->content['subtitle'] ?? 'Mengenal pimpinan PROKOPIM Kabupaten Mahakam Ulu secara lebih dekat.';
+        $subtitle = $profilePage?->content['subtitle'] ?? 'Mengenal pimpinan Kecamatan Long Bagun Kabupaten Mahakam Ulu secara lebih dekat.';
         $resolveLeaderPhoto = function (?string $path): string {
             $path = trim((string) $path);
 

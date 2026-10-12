@@ -1,6 +1,6 @@
 ﻿<x-layouts.app>
     <x-slot name="metaDescription">
-        Whistleblowing System (WBS) - Sistem Pelaporan Pelanggaran PROKOPIM Kabupaten Mahakam Ulu. Laporkan indikasi tindak pidana korupsi atau pelanggaran lainnya secara rahasia dan aman.
+        Whistleblowing System (WBS) - Sistem Pelaporan Pelanggaran Kecamatan Long Bagun Kabupaten Mahakam Ulu. Laporkan indikasi tindak pidana korupsi atau pelanggaran lainnya secara rahasia dan aman.
     </x-slot>
 
     {{-- ===================== PAGE HERO ===================== --}}
@@ -20,7 +20,7 @@
                     Whistleblowing System
                 </div>
                 <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-[#10192D] leading-tight drop-shadow-2xl">Layanan <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #FCA5A5 0%, #EF4444 50%, #B91C1C 100%);">WBS</span></h1>
-                <p class="mt-6 text-red-100 text-lg font-medium max-w-2xl mx-auto leading-relaxed">Sistem pelaporan pelanggaran yang terjadi di lingkungan PROKOPIM. Identitas Anda akan kami <span class="text-white font-bold bg-red-500/30 px-2 py-0.5 rounded">rahasiakan</span>.</p>
+                <p class="mt-6 text-red-100 text-lg font-medium max-w-2xl mx-auto leading-relaxed">Sistem pelaporan pelanggaran yang terjadi di lingkungan Kecamatan Long Bagun. Identitas Anda akan kami <span class="text-white font-bold bg-red-500/30 px-2 py-0.5 rounded">rahasiakan</span>.</p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-red-400 transition-colors">Beranda</a><span>/</span><span class="text-red-400">WBS</span>
                 </div>
@@ -250,7 +250,7 @@
                     </div>
                     <div class="px-5 py-4">
                         <p class="text-xs text-slate-600 leading-relaxed text-justify">
-                            PROKOPIM Kabupaten Mahakam Ulu akan <strong>merahasiakan identitas pelapor</strong> sesuai kebijakan dan peraturan peundang-undangan yang berlaku. <br><br>
+                            Kecamatan Long Bagun Kabupaten Mahakam Ulu akan <strong>merahasiakan identitas pelapor</strong> sesuai kebijakan dan peraturan peundang-undangan yang berlaku. <br><br>
                             Fokus kami adalah pada <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800 font-medium">materi informasi</span> yang Anda laporkan. Laporan yang masuk akan ditelaah oleh Tim Inspektorat Wilayah atau pejabat berwenang khusus, dan tidak melibatkan pihak yang dilaporkan dalam proses investigasi.
                         </p>
                     </div>

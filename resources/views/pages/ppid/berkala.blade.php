@@ -15,7 +15,7 @@
                     <div class="relative flex h-2 w-2 mx-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#274CA5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#9ae600]"></span></div>PPID
                 </div>
                 <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-[#10192D] leading-tight drop-shadow-2xl">Informasi <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">Berkala</span></h1>
-                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Informasi publik yang wajib disediakan dan diumumkan secara berkala oleh PROKOPIM Kabupaten Mahakam Ulu.</p>
+                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Informasi publik yang wajib disediakan dan diumumkan secara berkala oleh Kecamatan Long Bagun Kabupaten Mahakam Ulu.</p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-[#274CA5] transition-colors">Beranda</a><span>/</span><span>PPID</span><span>/</span><span class="text-[#274CA5]">Informasi Berkala</span>
                 </div>
@@ -46,7 +46,7 @@
                         'id'    => 1,
                         'title' => 'Informasi Profil Badan Publik',
                         'rows'  => [
-                            ['key' => 'ppid_bk_profil', 'no' => 1, 'judul' => 'Profil PROKOPIM Kab. Mahakam Ulu', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/profil-prokopim.pdf'],
+                            ['key' => 'ppid_bk_profil', 'no' => 1, 'judul' => 'Profil Kecamatan Long Bagun Kab. Mahakam Ulu', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/profil-prokopim.pdf'],
                             ['key' => 'ppid_bk_struktur', 'no' => 2, 'judul' => 'Struktur Organisasi', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/struktur-organisasi.pdf'],
                             ['key' => 'ppid_bk_tupoksi', 'no' => 3, 'judul' => 'Tugas Pokok dan Fungsi', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/tupoksi.pdf'],
                             ['key' => 'ppid_bk_visimisi', 'no' => 4, 'judul' => 'Visi, Misi dan Tujuan Organisasi', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/visi-misi.pdf'],
@@ -92,7 +92,7 @@
                         'id'    => 6,
                         'title' => 'Informasi Peraturan, Keputusan, dan/atau Kebijakan',
                         'rows'  => [
-                            ['key' => 'ppid_bk_sk_kepala', 'no' => 1, 'judul' => 'SK Kepala PROKOPIM Tentang PPID', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/sk-kepala-ppid.pdf'],
+                            ['key' => 'ppid_bk_sk_kepala', 'no' => 1, 'judul' => 'SK Camat Long Bagun Tentang PPID', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/sk-kepala-ppid.pdf'],
                             ['key' => 'ppid_bk_perbup', 'no' => 2, 'judul' => 'Peraturan Bupati Tentang PPID', 'tahun' => '2024', 'format' => 'PDF', 'file' => 'documents/ppid/perbup-ppid.pdf'],
                             ['key' => 'ppid_bk_sop', 'no' => 3, 'judul' => 'SOP Layanan Informasi Publik', 'tahun' => '2024', 'format' => 'PDF', 'file' => 'documents/ppid/sop-ppid.pdf'],
                         ],

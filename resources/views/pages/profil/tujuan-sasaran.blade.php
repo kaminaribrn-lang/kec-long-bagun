@@ -34,7 +34,7 @@
                     Tujuan <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">&amp; Sasaran</span>
                 </h1>
                 <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">
-                    Target dan indikator capaian pembangunan yang ingin diwujudkan oleh PROKOPIM Kabupaten Mahakam Ulu.
+                    Target dan indikator capaian pembangunan yang ingin diwujudkan oleh Kecamatan Long Bagun Kabupaten Mahakam Ulu.
                 </p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-[#274CA5] transition-colors">Beranda</a>

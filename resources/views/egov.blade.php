@@ -1,10 +1,10 @@
 <x-layouts.app>
     <x-slot name="pageTitle">
-        e-Gov | PROKOPIM Mahakam Ulu
+        e-Gov | Kecamatan Long Bagun
     </x-slot>
 
     <x-slot name="metaDescription">
-        e-Gov PROKOPIM Kabupaten Mahakam Ulu. Akses aplikasi pemerintahan digital dan layanan terintegrasi dalam satu halaman.
+        e-Gov Kecamatan Long Bagun Kabupaten Mahakam Ulu. Akses aplikasi pemerintahan digital dan layanan terintegrasi dalam satu halaman.
     </x-slot>
 
     @php

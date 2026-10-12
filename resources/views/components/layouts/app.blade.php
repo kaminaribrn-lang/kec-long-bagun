@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#0f172a">
-    <meta name="description" content="{{ $metaDescription ?? 'Portal resmi Bagian Protokol dan Komunikasi Pimpinan (PROKOPIM) Kabupaten Mahakam Ulu. Informasi keprotokolan, komunikasi pimpinan, agenda, regulasi, dan layanan publik.' }}">
-    <meta name="keywords" content="PROKOPIM, Mahakam Ulu, Perencanaan Pembangunan, PPID, Informasi Publik, Kalimantan Timur">
-    <meta name="author" content="PROKOPIM Kabupaten Mahakam Ulu">
+    <meta name="description" content="{{ $metaDescription ?? 'Portal resmi Bagian Protokol dan Komunikasi Pimpinan (Kecamatan Long Bagun) Kabupaten Mahakam Ulu. Informasi keprotokolan, komunikasi pimpinan, agenda, regulasi, dan layanan publik.' }}">
+    <meta name="keywords" content="Kecamatan Long Bagun, Mahakam Ulu, Perencanaan Pembangunan, PPID, Informasi Publik, Kalimantan Timur">
+    <meta name="author" content="Kecamatan Long Bagun Kabupaten Mahakam Ulu">
     <meta name="robots" content="index, follow">
 
     @php
@@ -55,8 +55,8 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     {{-- Open Graph / Social Media --}}
-    <meta property="og:title" content="{{ $pageTitle ?? config('app.name', 'PROKOPIM Mahakam Ulu') }}">
-    <meta property="og:description" content="{{ $metaDescription ?? 'Portal resmi PROKOPIM Kabupaten Mahakam Ulu — Merajut perencanaan pembangunan yang inovatif dan berkelanjutan.' }}">
+    <meta property="og:title" content="{{ $pageTitle ?? config('app.name', 'Kecamatan Long Bagun') }}">
+    <meta property="og:description" content="{{ $metaDescription ?? 'Portal resmi Kecamatan Long Bagun Kabupaten Mahakam Ulu — Merajut perencanaan pembangunan yang inovatif dan berkelanjutan.' }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ $socialImage }}">
@@ -64,19 +64,19 @@
     <meta property="og:image:type" content="{{ $socialImageType }}">
     <meta property="og:image:width" content="{{ $socialImageWidth }}">
     <meta property="og:image:height" content="{{ $socialImageHeight }}">
-    <meta property="og:image:alt" content="{{ $pageTitle ?? config('app.name', 'PROKOPIM Mahakam Ulu') }}">
-    <meta property="og:site_name" content="PROKOPIM Mahakam Ulu">
+    <meta property="og:image:alt" content="{{ $pageTitle ?? config('app.name', 'Kecamatan Long Bagun') }}">
+    <meta property="og:site_name" content="Kecamatan Long Bagun">
     <meta property="og:locale" content="id_ID">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ $pageTitle ?? config('app.name', 'PROKOPIM Mahakam Ulu') }}">
-    <meta name="twitter:description" content="{{ $metaDescription ?? 'Portal resmi PROKOPIM Kabupaten Mahakam Ulu — Merajut perencanaan pembangunan yang inovatif dan berkelanjutan.' }}">
+    <meta name="twitter:title" content="{{ $pageTitle ?? config('app.name', 'Kecamatan Long Bagun') }}">
+    <meta name="twitter:description" content="{{ $metaDescription ?? 'Portal resmi Kecamatan Long Bagun Kabupaten Mahakam Ulu — Merajut perencanaan pembangunan yang inovatif dan berkelanjutan.' }}">
     <meta name="twitter:image" content="{{ $socialImage }}">
 
     {{-- Canonical URL --}}
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <title>{{ $pageTitle ?? config('app.name', 'PROKOPIM Mahakam Ulu') }}</title>
+    <title>{{ $pageTitle ?? config('app.name', 'Kecamatan Long Bagun') }}</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="{{ asset('images/Mahakam_Ulu.webp') }}">

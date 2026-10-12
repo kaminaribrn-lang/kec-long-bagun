@@ -14,7 +14,7 @@
                     <div class="relative flex h-2 w-2 mx-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#274CA5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#9ae600]"></span></div>Dokumen
                 </div>
                 <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-[#10192D] leading-tight drop-shadow-2xl"><span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">D</span>PA</h1>
-                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Dokumen Pelaksanaan Anggaran (DPA) PROKOPIM Kabupaten Mahakam Ulu â€” dokumen anggaran pelaksanaan kegiatan.</p>
+                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Dokumen Pelaksanaan Anggaran (DPA) Kecamatan Long Bagun Kabupaten Mahakam Ulu â€” dokumen anggaran pelaksanaan kegiatan.</p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-[#274CA5] transition-colors">Beranda</a><span>/</span><span>Dokumen</span><span>/</span><span class="text-[#274CA5]">DPA</span>
                 </div>
@@ -45,10 +45,10 @@
                 @php
                 $dokumenCategory = 'dpa';
                 $documents = [
-                    ['key' => 'dok_dpa_2026', 'no' => 'DPA TA 2026', 'title' => 'Dokumen Pelaksanaan Anggaran PROKOPIM Tahun Anggaran 2026', 'year' => '2026', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_dpa_2025', 'no' => 'DPA TA 2025', 'title' => 'Dokumen Pelaksanaan Anggaran PROKOPIM Tahun Anggaran 2025', 'year' => '2025', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_dpa_2024', 'no' => 'DPA TA 2024', 'title' => 'Dokumen Pelaksanaan Anggaran PROKOPIM Tahun Anggaran 2024', 'year' => '2024', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_dpa_perubahan_2025', 'no' => 'DPPA TA 2025', 'title' => 'Dokumen Pelaksanaan Perubahan Anggaran PROKOPIM Tahun Anggaran 2025', 'year' => '2025', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_dpa_2026', 'no' => 'DPA TA 2026', 'title' => 'Dokumen Pelaksanaan Anggaran Kecamatan Long Bagun Tahun Anggaran 2026', 'year' => '2026', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_dpa_2025', 'no' => 'DPA TA 2025', 'title' => 'Dokumen Pelaksanaan Anggaran Kecamatan Long Bagun Tahun Anggaran 2025', 'year' => '2025', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_dpa_2024', 'no' => 'DPA TA 2024', 'title' => 'Dokumen Pelaksanaan Anggaran Kecamatan Long Bagun Tahun Anggaran 2024', 'year' => '2024', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_dpa_perubahan_2025', 'no' => 'DPPA TA 2025', 'title' => 'Dokumen Pelaksanaan Perubahan Anggaran Kecamatan Long Bagun Tahun Anggaran 2025', 'year' => '2025', 'type' => 'PDF', 'status' => 'Berlaku'],
                 ]; @endphp
                 @include('pages.dokumen._document-list')
             </main>

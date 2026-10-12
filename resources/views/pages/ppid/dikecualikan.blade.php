@@ -15,7 +15,7 @@
                     <div class="relative flex h-2 w-2 mx-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#274CA5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#9ae600]"></span></div>PPID
                 </div>
                 <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-[#10192D] leading-tight drop-shadow-2xl">Informasi <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">Dikecualikan</span></h1>
-                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Daftar informasi publik yang dikecualikan berdasarkan undang-undang dan peraturan yang berlaku di PROKOPIM Kabupaten Mahakam Ulu.</p>
+                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Daftar informasi publik yang dikecualikan berdasarkan undang-undang dan peraturan yang berlaku di Kecamatan Long Bagun Kabupaten Mahakam Ulu.</p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-[#274CA5] transition-colors">Beranda</a><span>/</span><span>PPID</span><span>/</span><span class="text-[#274CA5]">Informasi Dikecualikan</span>
                 </div>
@@ -46,9 +46,9 @@
                         'id'    => 1,
                         'title' => 'Daftar dan Penetapan Informasi Dikecualikan',
                         'rows'  => [
-                            ['key' => 'ppid_dk_daftar_2025', 'no' => 1, 'judul' => 'Daftar Informasi yang Dikecualikan PROKOPIM Kab. Mahakam Ulu Tahun 2025', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-daftar-2025.pdf'],
-                            ['key' => 'ppid_dk_daftar_2024', 'no' => 2, 'judul' => 'Daftar Informasi yang Dikecualikan PROKOPIM Kab. Mahakam Ulu Tahun 2024', 'tahun' => '2024', 'format' => 'PDF', 'file' => 'documents/ppid/dk-daftar-2024.pdf'],
-                            ['key' => 'ppid_dk_sk_penetapan', 'no' => 3, 'judul' => 'SK Kepala PROKOPIM tentang Penetapan Informasi yang Dikecualikan', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-sk-penetapan.pdf'],
+                            ['key' => 'ppid_dk_daftar_2025', 'no' => 1, 'judul' => 'Daftar Informasi yang Dikecualikan Kecamatan Long Bagun Kab. Mahakam Ulu Tahun 2025', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-daftar-2025.pdf'],
+                            ['key' => 'ppid_dk_daftar_2024', 'no' => 2, 'judul' => 'Daftar Informasi yang Dikecualikan Kecamatan Long Bagun Kab. Mahakam Ulu Tahun 2024', 'tahun' => '2024', 'format' => 'PDF', 'file' => 'documents/ppid/dk-daftar-2024.pdf'],
+                            ['key' => 'ppid_dk_sk_penetapan', 'no' => 3, 'judul' => 'SK Camat Long Bagun tentang Penetapan Informasi yang Dikecualikan', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-sk-penetapan.pdf'],
                             ['key' => 'ppid_dk_uji_konsekuensi', 'no' => 4, 'judul' => 'Hasil Uji Konsekuensi Informasi yang Dikecualikan Tahun 2025', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-uji-konsekuensi.pdf'],
                         ],
                     ],
@@ -56,7 +56,7 @@
                         'id'    => 2,
                         'title' => 'Informasi yang Dikecualikan karena Sifat Rahasia',
                         'rows'  => [
-                            ['key' => 'ppid_dk_rahasia_negara', 'no' => 1, 'judul' => 'Daftar Dokumen Rahasia Negara di Lingkungan PROKOPIM', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-rahasia-negara.pdf'],
+                            ['key' => 'ppid_dk_rahasia_negara', 'no' => 1, 'judul' => 'Daftar Dokumen Rahasia Negara di Lingkungan Kecamatan Long Bagun', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-rahasia-negara.pdf'],
                             ['key' => 'ppid_dk_intelijen', 'no' => 2, 'judul' => 'Dokumen Intelijen dan Keamanan Negara', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-intelijen.pdf'],
                             ['key' => 'ppid_dk_pertahanan', 'no' => 3, 'judul' => 'Rencana Strategis yang bersifat Rahasia Pertahanan Negara', 'tahun' => '2024', 'format' => 'PDF', 'file' => 'documents/ppid/dk-pertahanan.pdf'],
                         ],
@@ -65,7 +65,7 @@
                         'id'    => 3,
                         'title' => 'Informasi yang Dikecualikan karena Privasi',
                         'rows'  => [
-                            ['key' => 'ppid_dk_data_pribadi', 'no' => 1, 'judul' => 'Data Pribadi Pegawai PROKOPIM Kab. Mahakam Ulu', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-data-pribadi.pdf'],
+                            ['key' => 'ppid_dk_data_pribadi', 'no' => 1, 'judul' => 'Data Pribadi Pegawai Kecamatan Long Bagun Kab. Mahakam Ulu', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-data-pribadi.pdf'],
                             ['key' => 'ppid_dk_kesehatan', 'no' => 2, 'judul' => 'Data Kondisi Kesehatan dan Riwayat Medis Pegawai', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-kesehatan.pdf'],
                             ['key' => 'ppid_dk_skp', 'no' => 3, 'judul' => 'Dokumen Penilaian Kinerja Individu (SKP) Pegawai', 'tahun' => '2025', 'format' => 'PDF', 'file' => 'documents/ppid/dk-skp.pdf'],
                         ],

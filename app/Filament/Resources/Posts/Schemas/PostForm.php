@@ -94,8 +94,30 @@ class PostForm
                                 TextInput::make('penulis')
                                     ->label(__('Penulis'))
                                     ->default(fn() => auth()->user()->name),
+                                Textarea::make('ringkasan')
+                                    ->label(__('Ringkasan'))
+                                    ->rows(2)
+                                    ->maxLength(500)
+                                    ->helperText(__('Tampil di beranda dan daftar berita. Bila kosong, diambil dari awal konten.'))
+                                    ->columnSpanFull(),
+                                TextInput::make('kredit_foto')
+                                    ->label(__('Kredit foto'))
+                                    ->helperText(__('Nama pemotret atau pemilik foto utama.')),
+                                \Filament\Forms\Components\DatePicker::make('berakhir_at')
+                                    ->label(__('Tanggal berakhir (khusus pengumuman)'))
+                                    ->native(false)
+                                    ->displayFormat('d/m/Y')
+                                    ->helperText(__('Setelah tanggal ini, pengumuman tidak lagi tampil di beranda.')),
                                 \Filament\Forms\Components\RichEditor::make('content')
                                     ->label(__('Konten'))
+                                    ->fileAttachmentsDisk('public')
+                                    ->fileAttachmentsDirectory('posts/konten')
+                                    ->fileAttachmentsVisibility('public')
+                                    ->fileAttachmentsAcceptedFileTypes(['image/jpeg', 'image/png', 'image/webp', 'image/gif'])
+                                    ->fileAttachmentsMaxSize(10240)
+                                    ->resizableImages()
+                                    ->customBlocks([\App\Filament\RichEditor\VideoBlock::class])
+                                    ->helperText(__('Gambar: tombol lampiran (penjepit kertas) di bilah alat. Video: tombol blok, lalu seret "Video" ke dalam konten.'))
                                     ->columnSpanFull(),
                                 Select::make('status')
                                     ->options([

@@ -14,7 +14,7 @@
                     <div class="relative flex h-2 w-2 mx-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#274CA5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#9ae600]"></span></div>Dokumen
                 </div>
                 <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-[#10192D] leading-tight drop-shadow-2xl"><span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #10192d 0%, #F59E0B 50%, #D97706 100%);">I</span>KU</h1>
-                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Indikator Kinerja Utama (IKU) PROKOPIM Kabupaten Mahakam Ulu â€” tolok ukur keberhasilan pencapaian sasaran strategis.</p>
+                <p class="mt-3 text-black/90 text-lg font-medium max-w-2xl leading-relaxed">Indikator Kinerja Utama (IKU) Kecamatan Long Bagun Kabupaten Mahakam Ulu â€” tolok ukur keberhasilan pencapaian sasaran strategis.</p>
                 <div class="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
                     <a href="{{ route('beranda') }}" class="hover:text-[#274CA5] transition-colors">Beranda</a><span>/</span><span>Dokumen</span><span>/</span><span class="text-[#274CA5]">IKU</span>
                 </div>
@@ -45,9 +45,9 @@
                 @php
                 $dokumenCategory = 'iku';
                 $documents = [
-                    ['key' => 'dok_iku_2021_2026', 'no' => 'IKU 2021-2026', 'title' => 'Indikator Kinerja Utama PROKOPIM Kabupaten Mahakam Ulu Tahun 2021-2026', 'year' => '2021', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_iku_perubahan', 'no' => 'Perubahan IKU', 'title' => 'Perubahan Indikator Kinerja Utama PROKOPIM Kabupaten Mahakam Ulu', 'year' => '2023', 'type' => 'PDF', 'status' => 'Berlaku'],
-                    ['key' => 'dok_iku_2016_2021', 'no' => 'IKU 2016-2021', 'title' => 'Indikator Kinerja Utama PROKOPIM Kabupaten Mahakam Ulu Tahun 2016-2021', 'year' => '2016', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_iku_2021_2026', 'no' => 'IKU 2021-2026', 'title' => 'Indikator Kinerja Utama Kecamatan Long Bagun Kabupaten Mahakam Ulu Tahun 2021-2026', 'year' => '2021', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_iku_perubahan', 'no' => 'Perubahan IKU', 'title' => 'Perubahan Indikator Kinerja Utama Kecamatan Long Bagun Kabupaten Mahakam Ulu', 'year' => '2023', 'type' => 'PDF', 'status' => 'Berlaku'],
+                    ['key' => 'dok_iku_2016_2021', 'no' => 'IKU 2016-2021', 'title' => 'Indikator Kinerja Utama Kecamatan Long Bagun Kabupaten Mahakam Ulu Tahun 2016-2021', 'year' => '2016', 'type' => 'PDF', 'status' => 'Berlaku'],
                 ]; @endphp
                 @include('pages.dokumen._document-list')
             </main>

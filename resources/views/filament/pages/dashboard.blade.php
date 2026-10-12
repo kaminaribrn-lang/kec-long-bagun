@@ -33,8 +33,10 @@
                             <h1>{{ $this->greeting }}, {{ __('Admin!') }}</h1>
                             <p class="subtitle">
                                 <span class="user-name">{{ auth()->user()->name }}</span> ·
-                                <span class="live-clock"
-                                    wire:poll.1s>{{ now('Asia/Makassar')->translatedFormat('H:i:s') }}
+                                <span class="live-clock" wire:ignore
+                                    x-data="{ jam: '{{ now('Asia/Makassar')->format('H:i:s') }}', t: null }"
+                                    x-init="t = setInterval(() => jam = new Date().toLocaleTimeString('en-GB', { timeZone: 'Asia/Makassar', hour12: false }), 1000)"
+                                    x-on:livewire:navigating.window="clearInterval(t)"><span x-text="jam">{{ now('Asia/Makassar')->format('H:i:s') }}</span>
                                     {{ __('WITA') }}</span>
                             </p>
                         </div>
@@ -103,7 +105,7 @@
             </div>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="/js/vendor/gsap.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 // Initial states for GSAP (prevent flicker)

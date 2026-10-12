@@ -16,7 +16,7 @@
                     <div class="relative flex h-2 w-2 mx-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-70"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-sky-300"></span></div>PPID
                 </div>
                 <h1 class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white leading-tight drop-shadow-2xl">Permohonan <span class="text-sky-200">Informasi</span></h1>
-                <p class="mt-4 text-white/85 text-base sm:text-lg max-w-2xl leading-relaxed mx-auto">Layanan pengajuan permohonan informasi publik secara mandiri kepada PPID PROKOPIM Kabupaten Mahakam Ulu.</p>
+                <p class="mt-4 text-white/85 text-base sm:text-lg max-w-2xl leading-relaxed mx-auto">Layanan pengajuan permohonan informasi publik secara mandiri kepada PPID Kecamatan Long Bagun Kabupaten Mahakam Ulu.</p>
                 <div class="mt-5 flex items-center justify-center gap-2 text-sm text-white/70">
                     <a href="{{ route('beranda') }}" class="hover:text-sky-200 transition-colors">Beranda</a><span>/</span><span>PPID</span><span>/</span><span class="text-sky-200">Permohonan Informasi</span>
                 </div>

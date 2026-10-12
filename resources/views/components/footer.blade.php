@@ -1,6 +1,6 @@
 @php
     $site = $site ?? \App\Models\WebsiteIdentity::query()->latest('id')->first();
-    $brandTitle = $site?->welcome_title ?: 'PROKOPIM';
+    $brandTitle = $site?->welcome_title ?: 'Kecamatan Long Bagun';
     $brandName = $site?->name ?: 'MAHAKAM ULU';
     $contactAddress = $site?->address ?: 'Komplek Perkantoran Semi Permanen Ujoh Bilang';
     $contactPhone = $site?->phone ?: '0853-4559-2345';
@@ -8,7 +8,7 @@
     $instagramUrl = $site?->instagram ?: 'https://www.instagram.com/prokopimmahulu/';
     $instagramLabel = ltrim(parse_url($instagramUrl, PHP_URL_PATH) ?? '@prokopimmahulu', '/');
     $youtubeUrl = $site?->youtube ?: 'https://www.youtube.com/@PROKOPIM.mahulu';
-    $youtubeLabel = 'PROKOPIM Kab MAHULU';
+    $youtubeLabel = 'Kecamatan Long Bagun Kab MAHULU';
 @endphp
 
 <footer class="bg-instansi-primary text-white relative overflow-hidden">
@@ -26,7 +26,7 @@
                          class="logo-sharp h-14 w-auto drop-shadow-lg" alt="Logo Pemkab Mahakam Ulu" 
                          onerror="this.style.display='none'">
                     <div>
-                        <h3 class="font-extrabold text-xl leading-tight text-white tracking-wide">PROKOPIM</h3>
+                        <h3 class="font-extrabold text-xl leading-tight text-white tracking-wide">Kecamatan Long Bagun</h3>
                         <p class="text-[13px] font-medium text-white tracking-widest uppercase">{{ strtoupper($brandName) }}</p>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                             ['label' => 'KEMENDAGRI RI', 'url' => 'https://pelita.kemendagri.go.id/'],
                             ['label' => 'KEMENKEU RI', 'url' => 'https://www.kemenkeu.go.id/'],
                             ['label' => 'BAPPENAS RI', 'url' => 'https://www.bappenas.go.id/'],
-                            ['label' => 'PROKOPIM KALTIM', 'url' => 'https://bappeda.kaltimprov.go.id/beranda'],
+                            ['label' => 'Kecamatan Long Bagun KALTIM', 'url' => 'https://bappeda.kaltimprov.go.id/beranda'],
                             ['label' => 'BPS PUSAT', 'url' => 'https://www.bps.go.id/id'],
                             ['label' => 'BPS KALTIM', 'url' => 'https://kaltim.bps.go.id/id'],
                         ];
@@ -98,11 +98,11 @@
                 </ul>
             </div>
 
-            <!-- Column 3: PROKOPIM Kota & Kabupaten -->
+            <!-- Column 3: Kecamatan Long Bagun Kota & Kabupaten -->
             <div class="lg:w-auto">
                 <h4 class="font-bold text-white mb-6 uppercase tracking-wider text-sm flex items-center">
                     <span class="w-2 h-2 rounded-full bg-white mr-3"></span>
-                    PROKOPIM Kota
+                    Kecamatan Long Bagun Kota
                 </h4>
                 <ul class="space-y-2 text-[13px] text-slate-300 font-medium tracking-wide mb-8">
                     @php
@@ -123,7 +123,7 @@
 
                 <h4 class="font-bold text-white mb-6 uppercase tracking-wider text-sm flex items-center">
                     <span class="w-2 h-2 rounded-full bg-white mr-3"></span>
-                    PROKOPIM Kabupaten
+                    Kecamatan Long Bagun Kabupaten
                 </h4>
                 <div class="grid grid-cols-1 gap-2 text-[13px] text-slate-300 font-medium tracking-wide">
                     @php

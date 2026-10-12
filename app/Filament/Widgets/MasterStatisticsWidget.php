@@ -19,7 +19,7 @@ use Filament\Widgets\Widget;
 class MasterStatisticsWidget extends Widget
 {
     protected string $view = 'filament.widgets.master-statistics-widget';
-    protected static ?string $pollingInterval = '15s';
+    protected static ?string $pollingInterval = '60s';
 
     public function getStats(): array
     {

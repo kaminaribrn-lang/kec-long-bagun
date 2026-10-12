@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             WebsiteMenuSeeder::class,
+            KecamatanSeeder::class,
         ]);
 
         \Illuminate\Support\Facades\Schema::enableForeignKeyConstraints();

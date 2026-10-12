@@ -35,6 +35,25 @@ class WebsiteIdentity extends Model
         'survey_link_url',
         'seo',
         'social_links',
+        'jam_pelayanan',
+        'latitude',
+        'longitude',
+        'alert_active',
+        'alert_text',
+        'alert_level',
+        'hero_image',
+        'hero_image_kredit',
+        'sejarah',
+        'visi',
+        'misi',
+        'geografi',
+        'batas_utara',
+        'batas_timur',
+        'batas_selatan',
+        'batas_barat',
+        'akses',
+        'akses_catatan',
+        'akses_diperbarui',
     ];
 
     protected $casts = [
@@ -45,5 +64,8 @@ class WebsiteIdentity extends Model
         'gpr_widget_status'     => 'boolean',
         'seo'                   => 'array',
         'social_links'          => 'array',
+        'alert_active'          => 'boolean',
+        'akses'                 => 'array',
+        'akses_diperbarui'      => 'date',
     ];
 }

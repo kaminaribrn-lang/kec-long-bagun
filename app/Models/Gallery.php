@@ -12,6 +12,8 @@ class Gallery extends Model
         'image',
         'is_active',
         'order',
+        'kegiatan',
+        'kredit',
     ];
 
     protected $casts = [

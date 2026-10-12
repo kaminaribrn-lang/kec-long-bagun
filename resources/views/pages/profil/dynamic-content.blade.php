@@ -1,7 +1,7 @@
 <x-layouts.app>
     @php
         $content = $profilePage->content ?? [];
-        $subtitle = $content['subtitle'] ?? $profilePage->meta_desc ?? 'Informasi profil PROKOPIM Kabupaten Mahakam Ulu.';
+        $subtitle = $content['subtitle'] ?? $profilePage->meta_desc ?? 'Informasi profil Kecamatan Long Bagun Kabupaten Mahakam Ulu.';
         $mainTitle = $profilePage->title;
         $sectionTitle = $content['judul'] ?? $profilePage->title;
         $rawMainContent = $content['isi_konten'] ?? ($content['content'] ?? null);

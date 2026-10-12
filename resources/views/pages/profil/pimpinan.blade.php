@@ -140,7 +140,7 @@
                             </svg>
                             <div>
                                 <p class="text-slate-600 text-sm leading-relaxed italic">
-                                    Sebagai Kepala PROKOPIM Kabupaten Mahakam Ulu, kami berkomitmen memberikan pelayanan keprotokolan dan komunikasi pimpinan yang profesional, responsif, dan transparan. Melalui sinergi dengan seluruh OPD dan media, kita wujudkan Mahakam Ulu yang lebih maju dan sejahtera.
+                                    Sebagai Camat Long Bagun Kabupaten Mahakam Ulu, kami berkomitmen memberikan pelayanan keprotokolan dan komunikasi pimpinan yang profesional, responsif, dan transparan. Melalui sinergi dengan seluruh OPD dan media, kita wujudkan Mahakam Ulu yang lebih maju dan sejahtera.
                                 </p>
                                 <p class="text-sky-600 font-bold text-xs mt-3">— Yohanes Andy Abeh, S.Sos., M.Si.</p>
                             </div>
@@ -163,7 +163,7 @@
 
                 <div class="space-y-8">
                     @foreach([
-                        ['period' => '2024 — Sekarang', 'title' => 'Kepala PROKOPIM', 'org' => 'Kabupaten Mahakam Ulu', 'active' => true],
+                        ['period' => '2024 — Sekarang', 'title' => 'Camat Long Bagun', 'org' => 'Kabupaten Mahakam Ulu', 'active' => true],
                         ['period' => '2021 — 2024', 'title' => 'Kepala BPKAD', 'org' => 'Kabupaten Mahakam Ulu', 'active' => false],
                         ['period' => '2018 — 2021', 'title' => 'Kepala Dinas PUPR', 'org' => 'Kabupaten Mahakam Ulu', 'active' => false],
                     ] as $career)

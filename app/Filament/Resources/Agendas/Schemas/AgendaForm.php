@@ -50,6 +50,13 @@ class AgendaForm
                     ->placeholder(__('Masukkan lokasi kegiatan'))
                     ->maxLength(255)
                     ->columnSpan(2),
+
+                DatePicker::make('end_at')
+                    ->label(__('Tanggal selesai (opsional)'))
+                    ->native(false)
+                    ->displayFormat('d/m/Y')
+                    ->helperText(__('Untuk kegiatan lebih dari satu hari. Setelah lewat, agenda pindah ke arsip.'))
+                    ->columnSpan(1),
             ]);
     }
 }

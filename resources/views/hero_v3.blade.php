@@ -68,7 +68,7 @@
                             </h1>
                             <div class="space-y-0">
                                 <span class="block font-montserrat font-black text-4xl sm:text-6xl lg:text-[4rem] text-instansi-text-main leading-[0.9] tracking-tight">
-                                    PROKOPIM
+                                    Kecamatan Long Bagun
                                 </span>
                                 <span class="block font-montserrat font-black text-4xl sm:text-6xl lg:text-[4rem] text-transparent bg-clip-text leading-[1.05] tracking-tight" style="background-image: linear-gradient(135deg, #10192d 0%, #D97706 60%, #92400E 100%); filter: drop-shadow(0 4px 20px rgba(251, 191, 36,0.15));">
                                     MAHAKAM ULU

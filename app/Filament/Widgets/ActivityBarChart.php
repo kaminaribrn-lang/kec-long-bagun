@@ -11,7 +11,7 @@ class ActivityBarChart extends ChartWidget
     {
         return __('Aktivitas Publikasi Mingguan');
     }
-    protected ?string $pollingInterval = '30s';
+    protected ?string $pollingInterval = '60s';
 
     public function getMaxHeight(): ?string
     {
