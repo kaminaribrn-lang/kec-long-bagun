@@ -51,6 +51,54 @@
         </div>
     </section>
 
+    {{-- 1b. Slider di kiri, daftar agenda di kanan --}}
+    <section class="sx sa">
+        <div class="in">
+            <div class="sagrid">
+                <div class="sld" id="slider" aria-roledescription="carousel" aria-label="Slider informasi">
+                    <div class="track">
+                        @forelse ($sliders as $s)
+                            @php $tag = $s->link ? 'a' : 'div'; @endphp
+                            <{{ $tag }} class="sl" @if ($s->link) href="{{ $s->link }}" @endif>
+                                @include('site.partials.foto', ['path' => $s->file?->storage_path ?? $s->file?->path, 'label' => $s->caption ?: 'Slider', 'alt' => $s->caption ?: 'Slider'])
+                            </{{ $tag }}>
+                        @empty
+                            <div class="sl">@include('site.partials.foto', ['path' => null, 'label' => 'Slider'])</div>
+                        @endforelse
+                    </div>
+                    @if ($sliders->count() > 1)
+                        <div class="nav-s">
+                            <button type="button" class="prev" aria-label="Slide sebelumnya">@include('site.partials.ikon', ['n' => 'panah', 's' => 16])</button>
+                            <div class="dots-s">
+                                @foreach ($sliders as $i => $s)
+                                    <button type="button" @class(['on' => $i === 0]) aria-label="Slide {{ $i + 1 }}"></button>
+                                @endforeach
+                            </div>
+                            <button type="button" class="next" aria-label="Slide berikutnya">@include('site.partials.ikon', ['n' => 'panah', 's' => 16])</button>
+                        </div>
+                    @endif
+                </div>
+                <aside class="side sagenda">
+                    <div class="sahead">
+                        <h3>@include('site.partials.ikon', ['n' => 'kalender'])Agenda</h3>
+                        <a class="more" style="margin:0;font-size:13px" href="{{ route('agenda') }}">Semua @include('site.partials.ikon', ['n' => 'panah', 's' => 14])</a>
+                    </div>
+                    {{-- Urut waktu: agenda yang sudah lewat di atas, yang mendatang di bawah. --}}
+                    <div class="salist">
+                        @if ($agendaAdaLagi)
+                            <button type="button" class="samuat" data-url="{{ route('agenda.sebelumnya') }}" data-offset="{{ $agendaLalu->count() }}">Muat agenda sebelumnya</button>
+                        @endif
+                        @include('site.partials.agenda-baris', ['items' => $agendaLalu->reverse(), 'lalu' => true])
+                        @include('site.partials.agenda-baris', ['items' => $agenda])
+                        @if ($agenda->isEmpty() && $agendaLalu->isEmpty())
+                            <div class="empty"><span class="chip">@include('site.partials.ikon', ['n' => 'kalender'])</span>Belum ada agenda kegiatan.</div>
+                        @endif
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
     {{-- 2. Layanan cepat --}}
     <section class="sx alt">
         <div class="in">
@@ -132,7 +180,7 @@
                         <div class="empty"><span class="chip">@include('site.partials.ikon', ['n' => 'toa'])</span>Belum ada pengumuman.</div>
                     @endforelse
                     <h3 style="margin-top:6px">@include('site.partials.ikon', ['n' => 'kalender'])Agenda</h3>
-                    @forelse ($agenda as $a)
+                    @forelse ($agenda->take(3) as $a)
                         <a class="rowi" style="padding:10px 14px" href="{{ route('agenda') }}">
                             <div class="when"><b>{{ $a->schedule->format('j') }}</b><span>{{ $a->schedule->translatedFormat('M') }}</span></div>
                             <div class="grow" style="min-width:0"><h3>{{ $a->caption }}</h3><span class="small muted">{{ $a->location }}</span></div>
@@ -198,9 +246,66 @@
             </div>
         </section>
     @endif
+
+    {{-- 6. Media sosial --}}
+    @include('site.partials.sosmed')
 @endsection
 
 @push('skrip')
+<script>
+// Agenda beranda: agenda sebelumnya ada di atas, jadi daftar dibuka dari agenda mendatang
+// dan lima agenda sebelumnya disisipkan di atas tiap kali tombol ditekan.
+(function () {
+    var list = document.querySelector('.salist');
+    if (!list) return;
+    var awal = list.querySelector('.rowi:not(.lalu)');
+    list.scrollTop = awal ? awal.offsetTop :list.scrollHeight;
+    var btn = list.querySelector('.samuat');
+    if (!btn) return;
+    var teks = btn.textContent;
+    btn.addEventListener('click', function () {
+        btn.disabled = true;
+        btn.textContent = 'Memuat…';
+        fetch(btn.dataset.url + '?offset=' + btn.dataset.offset, { headers: { Accept: 'application/json' } })
+            .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(function (d) {
+                // Jaga posisi gulir supaya baris yang sedang dilihat tidak melompat.
+                var tinggi = list.scrollHeight, atas = list.scrollTop;
+                btn.insertAdjacentHTML('afterend', d.html);
+                btn.dataset.offset = d.offset;
+                if (d.habis) btn.remove();
+                list.scrollTop = atas + list.scrollHeight - tinggi;
+                if (d.habis) return;
+                btn.disabled = false;
+                btn.textContent = teks;
+            })
+            .catch(function () { btn.disabled = false; btn.textContent = 'Gagal memuat, coba lagi'; });
+    });
+})();
+</script>
+<script>
+// Slider beranda: geser dengan tombol, titik, atau usap; berganti sendiri tiap 5 detik.
+(function () {
+    var el = document.getElementById('slider');
+    if (!el) return;
+    var track = el.querySelector('.track'), dots = el.querySelectorAll('.dots-s button'), n = track.children.length;
+    if (n < 2) return;
+    function kini() { return Math.round(track.scrollLeft / track.clientWidth); }
+    function ke(i) { track.scrollTo({ left: ((i + n) % n) * track.clientWidth, behavior: 'smooth' }); }
+    el.querySelector('.prev').addEventListener('click', function () { ke(kini() - 1); });
+    el.querySelector('.next').addEventListener('click', function () { ke(kini() + 1); });
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { ke(i); }); });
+    track.addEventListener('scroll', function () {
+        var k = kini();
+        dots.forEach(function (d, i) { d.classList.toggle('on', i === k); });
+    }, { passive: true });
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var jeda = false;
+    ['mouseenter', 'focusin', 'touchstart'].forEach(function (e) { el.addEventListener(e, function () { jeda = true; }, { passive: true }); });
+    ['mouseleave', 'focusout'].forEach(function (e) { el.addEventListener(e, function () { jeda = false; }); });
+    setInterval(function () { if (!jeda && !document.hidden) ke(kini() + 1); }, 5000);
+})();
+</script>
 <script>
 // Pilih kampung dari tombol atau dari peta tanpa pindah halaman.
 (function () {

@@ -465,3 +465,60 @@ footer .flogo{height:56px;width:auto;display:block;margin-bottom:12px}
 .pmini .cincin{fill:rgba(242,181,58,.18);stroke:#D9A441;stroke-width:2;vector-effect:non-scaling-stroke}
 .pmini .titik{fill:#F2B53A;stroke:#7A4A00;stroke-width:1.5;vector-effect:non-scaling-stroke}
 .pmini .pket{position:absolute;left:12px;bottom:10px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--g);background:rgba(255,255,255,.8);border-radius:999px;padding:3px 9px}
+
+/* beranda: slider di kiri, daftar agenda di kanan */
+section.sx.sa{padding-block:56px 48px}
+.sagrid{display:grid;grid-template-columns:minmax(0,2.7fr) minmax(0,1fr);gap:18px}
+.sld{position:relative;aspect-ratio:2/1;border-radius:28px;overflow:hidden;background:var(--soft);border:1px solid var(--ln);box-shadow:0 24px 50px -30px rgba(22,33,30,.35)}
+.sld .track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.sld .track::-webkit-scrollbar{display:none}
+.sld .sl{flex:0 0 100%;height:100%;scroll-snap-align:start;display:block}
+.sld .sl img{width:100%;height:100%;object-fit:cover;display:block}
+.sld .sl .ph-box{height:100%;min-height:0;border-radius:0}
+.sld .nav-s{position:absolute;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:10px}
+.sld .nav-s>button{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.92);border:1px solid var(--ln);color:var(--ink);cursor:pointer;box-shadow:0 6px 16px -8px rgba(22,33,30,.4)}
+.sld .nav-s>button:hover{background:#fff;color:var(--g)}
+.sld .nav-s .prev svg{transform:rotate(-90deg)}
+.sld .nav-s .next svg{transform:rotate(90deg)}
+.sld .dots-s{display:flex;flex-direction:column;gap:5px;align-items:center;background:rgba(255,255,255,.92);border-radius:999px;padding:7px 5px}
+.sld .dots-s button{width:5px;height:5px;padding:0;border:0;border-radius:999px;background:var(--ink3);opacity:.5;cursor:pointer;transition:height .25s,background .25s,opacity .25s}
+.sld .dots-s button.on{height:22px;background:var(--gold);opacity:1}
+.sagenda{height:0;min-height:100%;overflow:hidden;padding:16px;gap:10px;border-radius:24px}
+.sagenda h3{font-size:14.5px}
+.sahead{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.salist{display:grid;gap:6px;align-content:start;overflow-y:auto;overflow-anchor:none;min-height:0;flex:1;margin-right:-8px;padding-right:8px;position:relative}
+.salist .rowi{flex-wrap:nowrap;gap:10px;padding:7px 10px;border-radius:14px;transition:border-color .2s,transform .2s}
+.salist .rowi:hover{border-color:var(--e200);transform:translateX(2px)}
+.salist .rowi .grow{min-width:0}
+.salist .rowi .small{font-size:11.5px}
+.salist .rowi h3{font-size:13px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.salist .rowi .when{width:40px;padding:6px 2px;border-radius:10px}
+.salist .rowi .when b{font-size:15px}
+.salist .rowi .when span{font-size:9.5px}
+.salist .rowi.lalu{opacity:.75}
+.salist .rowi.lalu .when{background:var(--soft);color:var(--ink2)}
+.samuat{font:inherit;font-size:12.5px;font-weight:600;color:var(--g);background:var(--soft);border:1px dashed var(--ln);border-radius:12px;padding:8px 10px;cursor:pointer}
+.samuat:hover{background:var(--gs)}
+.samuat:disabled{opacity:.6;cursor:default}
+/* beranda: media sosial, embed Instagram di kiri dan daftar akun di kanan */
+.sosgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px;align-items:start}
+.sosgrid.satu{grid-template-columns:1fr}
+.sosgrid.satu .soslist{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.sosig{background:#fff;border:1px solid var(--ln);border-radius:28px;padding:12px;overflow:hidden;min-height:120px;box-shadow:0 24px 50px -30px rgba(22,33,30,.35)}
+.sosig blockquote>a{display:block;padding:36px 16px;text-align:center;font-weight:600;color:var(--g)}
+.sosig iframe{border-radius:18px!important;border:0!important}
+.soslist{display:grid;gap:12px}
+.sosi{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--ln);border-radius:20px;padding:14px 16px;color:var(--ink3);transition:transform .25s ease,box-shadow .25s ease,border-color .25s}
+.sosi:hover{transform:translateY(-2px);border-color:#D9E2DE;box-shadow:0 20px 40px -26px rgba(22,33,30,.3);color:var(--g)}
+.sosi .chip{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--g);color:#fff}
+.sosi .chip svg{width:24px;height:24px}
+.sosi.instagram .chip{background:linear-gradient(135deg,#8B5CF6,#EC4899 55%,#FB923C)}
+.sosi.facebook .chip{background:#1877F2}
+.sosi.youtube .chip{background:#FF0000}
+.sosi.x .chip,.sosi.tiktok .chip{background:#111}
+.sosi .grow{flex:1;min-width:0;display:flex;flex-direction:column}
+.sosi small{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.sosi b{font-family:"Montserrat",sans-serif;font-size:15px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sosi .grow>span{font-size:12.5px;color:var(--ink2)}
+@media (max-width:900px){.sosgrid{grid-template-columns:1fr}}
+@media (max-width:900px){.sagrid{grid-template-columns:1fr}.sld{aspect-ratio:16/9;border-radius:22px}.sagenda{height:auto;min-height:0}.salist{overflow:visible}}

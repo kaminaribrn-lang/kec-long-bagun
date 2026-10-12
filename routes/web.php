@@ -60,6 +60,7 @@ Route::get('/berita/{slug}', [SiteController::class, 'beritaShow'])->name('berit
 Route::get('/pengumuman', [SiteController::class, 'pengumumanIndex'])->name('pengumuman.index');
 Route::get('/pengumuman/{slug}', [SiteController::class, 'pengumumanShow'])->name('pengumuman.show');
 Route::get('/agenda', [SiteController::class, 'agenda'])->name('agenda');
+Route::get('/agenda/sebelumnya', [SiteController::class, 'agendaSebelumnya'])->name('agenda.sebelumnya');
 Route::get('/galeri', [SiteController::class, 'galeri'])->name('galeri');
 
 // PPID, kontak, pencarian, peta situs

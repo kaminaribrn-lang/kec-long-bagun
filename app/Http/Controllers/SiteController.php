@@ -12,6 +12,7 @@ use App\Models\Kampung;
 use App\Models\Layanan;
 use App\Models\Pengaduan;
 use App\Models\Post;
+use App\Models\Slider;
 use App\Models\Statistik;
 use App\Support\Halaman;
 use App\Support\Situs;
@@ -62,12 +63,19 @@ class SiteController extends Controller
 
     public function home()
     {
+        // Agenda beranda selalu lima baris: yang mendatang, sisanya diisi agenda terakhir yang sudah lewat (tampil di atasnya).
+        $agenda = $this->agendaMendatang()->take(5)->get();
+        $agendaLalu = $this->agendaLalu()->take(5 - $agenda->count())->get();
+
         return view('site.home', [
+            'agendaLalu' => $agendaLalu,
+            'agendaAdaLagi' => $this->agendaLalu()->count() > $agendaLalu->count(),
             'kunci' => Statistik::where('topik', 'kunci')->orderBy('urutan')->get(),
             'layanans' => Layanan::where('status', true)->where('tampil_beranda', true)->orderBy('urutan')->take(4)->get(),
             'berita' => $this->berita()->take(5)->get(),
             'pengumuman' => $this->pengumuman()->take(3)->get(),
-            'agenda' => $this->agendaMendatang()->take(3)->get(),
+            'agenda' => $agenda,
+            'sliders' => Slider::with('file')->where('status', 1)->orderByDesc('is_pinned')->latest()->take(8)->get(),
             'kampungs' => Kampung::where('status', true)->orderByDesc('penduduk')->get(),
             'destinasis' => Destinasi::where('status', true)->orderBy('urutan')->take(3)->get(),
             'camat' => Aparatur::where('status', true)->orderBy('order')->first(),
@@ -368,9 +376,20 @@ class SiteController extends Controller
         return view('site.agenda', [
             'halaman' => $this->halamanIni(),
             'mendatang' => $this->agendaMendatang()->get(),
-            'arsip' => Agenda::whereNotNull('schedule')
-                ->whereRaw('COALESCE(end_at, schedule) < ?', [now()->startOfDay()])
-                ->orderByDesc('schedule')->take(30)->get(),
+            'arsip' => $this->agendaLalu()->take(30)->get(),
+        ]);
+    }
+
+    /** Lima agenda yang sudah lewat berikutnya untuk tombol "Muat agenda sebelumnya" di beranda. */
+    public function agendaSebelumnya(Request $request)
+    {
+        $offset = max(0, (int) $request->query('offset'));
+        $rows = $this->agendaLalu()->skip($offset)->take(6)->get();
+
+        return response()->json([
+            'html' => view('site.partials.agenda-baris', ['items' => $rows->take(5)->reverse(), 'lalu' => true])->render(),
+            'offset' => $offset + min(5, $rows->count()),
+            'habis' => $rows->count() <= 5,
         ]);
     }
 
@@ -483,5 +502,12 @@ class SiteController extends Controller
         return Agenda::query()->whereNotNull('schedule')
             ->whereRaw('COALESCE(end_at, schedule) >= ?', [now()->startOfDay()])
             ->orderBy('schedule');
+    }
+
+    private function agendaLalu(): Builder
+    {
+        return Agenda::query()->whereNotNull('schedule')
+            ->whereRaw('COALESCE(end_at, schedule) < ?', [now()->startOfDay()])
+            ->orderByDesc('schedule');
     }
 }
