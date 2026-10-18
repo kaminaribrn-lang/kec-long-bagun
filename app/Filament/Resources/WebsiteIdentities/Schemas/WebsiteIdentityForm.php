@@ -352,7 +352,7 @@ class WebsiteIdentityForm
                             ->url()
                             ->placeholder('https://eskm-inspektorat.akkreatif.my.id/')
                             ->default('https://eskm-inspektorat.akkreatif.my.id/')
-                            ->helperText(__('URL alamat website e-SKM (Survey Kepuasan Masyarakat).'))
+                            ->helperText(__('URL alamat website e-SKM (Survey Kepuasan Masyarakat). Tombol "Isi E-SKM" di beranda (sebelah Pengaduan warga) mengarah ke link ini; kosongkan untuk menyembunyikan tombol.'))
                             ->columnSpanFull(),
                     ])
                     ->columns(1)

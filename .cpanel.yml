@@ -8,6 +8,10 @@ deployment:
     # 1. Pasang/perbarui dependency PHP jika composer.lock berubah (aman dijalankan meski tidak ada perubahan).
     - if [ -f composer.json ]; then composer install --no-dev --optimize-autoloader --no-interaction; fi
 
+    # 1b. Salin livewire.js ke public/vendor/livewire. Nginx hosting menyajikan file .js secara statis
+    #     sehingga route /livewire/livewire.js milik Laravel menjadi 404 dan form login tidak berfungsi.
+    - php artisan livewire:publish --assets
+
     # 2. Jalankan migrasi database (termasuk migrasi penyederhanaan kategori Berita/Pengumuman/Uncategorized).
     - php artisan migrate --force
 

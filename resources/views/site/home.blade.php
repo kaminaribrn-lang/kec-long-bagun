@@ -132,9 +132,14 @@
                     <h3>Unduh formulir</h3>
                     <span class="go">Semua formulir</span>
                 </a>
-                <a href="{{ route('layanan.pengaduan') }}" class="bx wide">
+                <a href="{{ route('layanan.pengaduan') }}" class="bx wide half">
                     <span class="chip">@include('site.partials.ikon', ['n' => 'pesan'])</span>
                     <div><h3>Pengaduan warga</h3><p>Sampaikan keluhan atau masukan. Pesan langsung masuk ke kantor camat.</p></div>
+                </a>
+                {{-- Link E-SKM diatur di panel: Website Identity → Integrasi & SEO → Survey Kepuasan Masyarakat. --}}
+                <a href="{{ $site?->survey_link_url ?: '#' }}" class="bx wide half skm" @if ($site?->survey_link_url) target="_blank" rel="noopener" @endif>
+                    <span class="chip">@include('site.partials.ikon', ['n' => 'survei'])</span>
+                    <div><h3>Isi E-SKM</h3><p>Survei Kepuasan Masyarakat. Bantu kami meningkatkan mutu pelayanan.@unless ($site?->survey_link_url) {!! Situs::isi(null, 'Link E-SKM') !!}@endunless</p></div>
                 </a>
             </div>
         </div>
@@ -144,7 +149,7 @@
     <section class="sx">
         <div class="in">
             <div class="sh row"><div><span class="tag"><i></i>Informasi</span><h2>Berita dan <span>pengumuman</span></h2></div><a class="more" style="margin:0" href="{{ route('berita.index') }}">Semua berita @include('site.partials.ikon', ['n' => 'panah', 's' => 16])</a></div>
-            <div class="news">
+            <div class="news eq">
                 @if ($beritaUtama)
                     <div class="ncol">
                     <a href="{{ route('berita.show', $beritaUtama->slug) }}" class="feat">
@@ -174,20 +179,24 @@
                 @endif
                 <aside class="side">
                     <h3>@include('site.partials.ikon', ['n' => 'toa'])Pengumuman</h3>
-                    @forelse ($pengumuman as $p)
-                        <a class="rowi" style="padding:12px 14px" href="{{ route('pengumuman.show', $p->slug) }}"><div class="grow" style="min-width:0"><h3>{{ $p->title }}</h3><span class="small muted">{{ optional($p->published_at)->translatedFormat('j F Y') }}</span></div></a>
-                    @empty
-                        <div class="empty"><span class="chip">@include('site.partials.ikon', ['n' => 'toa'])</span>Belum ada pengumuman.</div>
-                    @endforelse
-                    <h3 style="margin-top:6px">@include('site.partials.ikon', ['n' => 'kalender'])Agenda</h3>
-                    @forelse ($agenda->take(3) as $a)
-                        <a class="rowi" style="padding:10px 14px" href="{{ route('agenda') }}">
-                            <div class="when"><b>{{ $a->schedule->format('j') }}</b><span>{{ $a->schedule->translatedFormat('M') }}</span></div>
-                            <div class="grow" style="min-width:0"><h3>{{ $a->caption }}</h3><span class="small muted">{{ $a->location }}</span></div>
-                        </a>
-                    @empty
-                        <div class="empty">Belum ada agenda kegiatan.</div>
-                    @endforelse
+                    <div class="plist">
+                        @forelse ($pengumuman as $p)
+                            <a class="rowi" href="{{ route('pengumuman.show', $p->slug) }}"><div class="grow"><h3>{{ $p->title }}</h3><span class="small muted">{{ optional($p->published_at)->translatedFormat('j F Y') }}</span></div></a>
+                        @empty
+                            <div class="empty"><span class="chip">@include('site.partials.ikon', ['n' => 'toa'])</span>Belum ada pengumuman.</div>
+                        @endforelse
+                    </div>
+                    @if ($site?->gpr_widget_status)
+                        {{-- Widget GPR Komdigi; diaktifkan di panel: Website Identity → Integrasi & SEO. Tingginya mengikuti kolom berita. --}}
+                        <div class="gpr">
+                            <div class="gpr-hd">
+                                <span class="gpr-logo"><img src="{{ asset('images/logokomdigi.png') }}" alt="Logo Komdigi" width="1160" height="822"></span>
+                                <div><b>GPR Komdigi</b><span>Berita pemerintah pusat</span></div>
+                            </div>
+                            <div class="gpr-bd"><div id="gpr-kominfo-widget-container"></div></div>
+                        </div>
+                        <script src="https://widget.komdigi.go.id/gpr-widget-kominfo.min.js" defer></script>
+                    @endif
                 </aside>
             </div>
         </div>

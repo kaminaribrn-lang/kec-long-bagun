@@ -128,6 +128,10 @@ section.em .panel{background:rgba(255,255,255,.78);border-color:rgba(255,255,255
 .bx.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:16px;background:linear-gradient(120deg,var(--golds),#fff 65%)}
 @media (max-width:520px){.bx.wide{grid-column:auto;flex-direction:column;align-items:flex-start}}
 .bx.wide .chip{background:#fff;border-color:#F1E3C4;color:#9A6B12}
+.bx.wide.half{grid-column:span 2}
+@media (max-width:520px){.bx.wide.half{grid-column:auto}}
+.bx.wide.skm{background:linear-gradient(120deg,var(--soft),#fff 65%)}
+.bx.wide.skm .chip{border-color:var(--ln2);color:var(--g)}
 
 /* berita */
 .news{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
@@ -522,3 +526,31 @@ section.sx.sa{padding-block:56px 48px}
 .sosi .grow>span{font-size:12.5px;color:var(--ink2)}
 @media (max-width:900px){.sosgrid{grid-template-columns:1fr}}
 @media (max-width:900px){.sagrid{grid-template-columns:1fr}.sld{aspect-ratio:16/9;border-radius:22px}.sagenda{height:auto;min-height:0}.salist{overflow:visible}}
+
+/* berita beranda: kolom pengumuman + GPR setinggi kolom berita */
+.news.eq{align-items:stretch}
+.plist{display:grid;gap:8px}
+.plist .rowi{padding:9px 12px;border-radius:14px;flex-wrap:nowrap}
+.plist .rowi .grow{min-width:0}
+.plist .rowi h3{font-size:13px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.plist .rowi .small{font-size:11.5px}
+.gpr{flex:1 1 auto;display:flex;flex-direction:column;gap:10px;min-height:340px;background:var(--g);border-radius:22px;padding:14px}
+.gpr-hd{display:flex;align-items:center;gap:12px;color:#fff;padding:2px 4px}
+.gpr-hd>div{display:flex;flex-direction:column}
+.gpr-hd b{font-size:15px;font-weight:700}
+.gpr-hd>div span{font-size:11.5px;color:var(--e200)}
+.gpr-logo{flex:none;width:46px;height:46px;border-radius:14px;background:#fff;display:grid;place-items:center;padding:6px}
+.gpr-logo img{width:100%;height:100%;object-fit:contain}
+.gpr-bd{position:relative;flex:1 1 auto;min-height:0}
+@media (max-width:900px){.gpr{flex:none}.gpr-bd{height:380px;flex:none}}
+/* timpa style bawaan widget (pakai !important, jadi butuh selector lebih spesifik) */
+.gpr #gpr-kominfo-widget-container{position:absolute!important;inset:0;max-width:none!important;min-width:0!important;background:#fff!important;border:0!important;border-radius:16px!important;overflow:hidden}
+.gpr #gpr-kominfo-widget-header,.gpr #gpr-kominfo-widget-footer{display:none!important}
+.gpr #gpr-kominfo-widget-body{height:100%;margin:0!important;padding:0 12px!important;border-radius:16px!important;overflow-y:auto;font-size:13px;color:var(--ink3)}
+.gpr #gpr-kominfo-widget-list{max-height:none!important;overflow:visible!important;margin:0!important}
+.gpr li.gpr-kominfo-widget-list-item{font-family:inherit!important;font-size:13px!important;line-height:1.35;padding:10px 0 10px 50px!important;background-size:40px!important;border-bottom:1px solid var(--ln)!important}
+.gpr li.gpr-kominfo-widget-list-item:last-child{border-bottom:0!important}
+.gpr li.gpr-kominfo-widget-list-item small{color:var(--g)!important}
+.gpr li.gpr-kominfo-widget-list-item .gpr-small-date{padding-right:0!important;color:var(--ink3)!important}
+.gpr li.gpr-kominfo-widget-list-item a{color:var(--ink)!important;font-weight:600}
+.gpr li.gpr-kominfo-widget-list-item a:hover{color:var(--g)!important}
