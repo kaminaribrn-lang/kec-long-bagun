@@ -522,6 +522,7 @@ section.sx.sa{padding-block:56px 48px}
 .sosi.x .chip,.sosi.tiktok .chip{background:#111}
 .sosi .grow{flex:1;min-width:0;display:flex;flex-direction:column}
 .sosi small{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.sosi small i{font-style:normal;text-transform:none;letter-spacing:.02em}
 .sosi b{font-family:"Montserrat",sans-serif;font-size:15px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sosi .grow>span{font-size:12.5px;color:var(--ink2)}
 @media (max-width:900px){.sosgrid{grid-template-columns:1fr}}

@@ -19,7 +19,7 @@
         };
     };
 
-    // Sumber: tautan dinamis dari admin, lalu kolom lama, lalu akun Pemkab Mahakam Ulu sebagai bawaan.
+    // Sumber: tautan dinamis dari admin, lalu kolom lama, lalu akun resmi Kecamatan Long Bagun sebagai bawaan.
     $tautan = collect($site->social_links)->filter(fn ($s) => filled($s['url'] ?? null))
         ->map(fn ($s) => ['platform' => $s['platform'] ?? '', 'url' => $s['url']]);
     if ($tautan->isEmpty()) {
@@ -28,11 +28,9 @@
     }
     if ($tautan->isEmpty()) {
         $tautan = collect([
-            ['platform' => 'instagram', 'url' => 'https://www.instagram.com/pemkab_mahulu/'],
-            ['platform' => 'facebook', 'url' => 'https://www.facebook.com/pemkabmahakamulu'],
-            ['platform' => 'youtube', 'url' => 'https://www.youtube.com/@prokopimmahulu/videos'],
-            ['platform' => 'x', 'url' => 'https://x.com/pemkabmahulu'],
-            ['platform' => 'tiktok', 'url' => 'https://www.tiktok.com/@pemkab.mahulu'],
+            ['platform' => 'instagram', 'url' => 'https://www.instagram.com/longbagunmahulu/'],
+            ['platform' => 'tiktok', 'url' => 'https://www.tiktok.com/@longbagunmahulu'],
+            ['platform' => 'youtube', 'url' => 'https://www.youtube.com/@longbagunmahulu'],
         ]);
     }
 
@@ -47,7 +45,8 @@
         return [
             'jenis' => $jenis,
             'label' => $merek[$jenis][0] ?? Str::headline($s['platform'] ?: 'Tautan'),
-            'nama' => $nama ?: ($merek[$jenis][0] ?? Str::headline($s['platform'] ?: 'Tautan')),
+            'nama' => 'Kecamatan Long Bagun',
+            'handle' => $nama,
             'ket' => $merek[$jenis][1] ?? 'Kunjungi akun kami',
             'url' => $s['url'],
         ];
@@ -76,7 +75,7 @@
                                 @include('site.partials.ikon', ['n' => 'pesan'])
                             @endif
                         </span>
-                        <span class="grow"><small>{{ $a['label'] }}</small><b>{{ $a['nama'] }}</b><span>{{ $a['ket'] }}</span></span>
+                        <span class="grow"><small>{{ $a['label'] }}@if ($a['handle']) · <i>{{ $a['handle'] }}</i>@endif</small><b>{{ $a['nama'] }}</b><span>{{ $a['ket'] }}</span></span>
                         @include('site.partials.ikon', ['n' => 'panah', 's' => 18])
                     </a>
                 @endforeach
