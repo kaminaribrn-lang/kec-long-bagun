@@ -31,6 +31,8 @@
             ['platform' => 'instagram', 'url' => 'https://www.instagram.com/longbagunmahulu/'],
             ['platform' => 'tiktok', 'url' => 'https://www.tiktok.com/@longbagunmahulu'],
             ['platform' => 'youtube', 'url' => 'https://www.youtube.com/@longbagunmahulu'],
+            ['platform' => 'x', 'url' => 'https://x.com/longbagunmahulu'],
+            ['platform' => 'facebook', 'url' => 'https://www.facebook.com/profile.php?id=61596057012218'],
         ]);
     }
 
